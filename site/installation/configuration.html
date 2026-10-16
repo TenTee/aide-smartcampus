@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr" data-racine="../" data-page="installation/configuration.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fichier de configuration (.env) · SmartCampus · Aide</title>
+<meta name="description" content="Les réglages propres à chaque installation (mots de passe, adresses) ne sont pas dans le code : ils sont dans des fichiers .env , à créer à partir des modèles f">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet" aria-current="true">Installation</a><a href="../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet" aria-current="true">Installation</a><a href="../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+    <p class="nav-titre">Installation</p><ul class="nav-arbre"><li><a href="../installation/index.html" data-page="installation/index.html">Présentation</a></li><li><a href="../installation/prerequis.html" data-page="installation/prerequis.html">Prérequis</a></li><li><a href="../installation/installation-locale.html" data-page="installation/installation-locale.html">Installation sur un poste (test)</a></li><li><a href="../installation/deploiement-serveur.html" data-page="installation/deploiement-serveur.html">Mise en ligne sur un serveur</a></li><li><a href="../installation/configuration.html" data-page="installation/configuration.html" aria-current="page">Fichier de configuration (.env)</a></li><li><a href="../installation/sauvegardes.html" data-page="installation/sauvegardes.html">Sauvegardes et restauration</a></li><li><a href="../installation/mise-a-jour.html" data-page="installation/mise-a-jour.html">Mettre à jour la plateforme</a></li><li><a href="../installation/depannage.html" data-page="installation/depannage.html">Dépannage</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> <a href="../installation/index.html">Installation et configuration</a></nav>
+      <h1>Fichier de configuration (.env)</h1>
+      <div id="bandeau-parcours"></div>
+      
+<p>Les réglages propres à chaque installation (mots de passe, adresses) ne sont <strong>pas</strong> dans le code : ils sont dans des fichiers <code>.env</code>, à créer à partir des modèles fournis. <strong>Ne partagez jamais ces fichiers</strong> et ne les envoyez pas dans Git (ils sont déjà exclus).</p>
+<p>Après toute modification :</p>
+<ul>
+<li>backend : redémarrez l'API (<code>sudo systemctl restart smartcampus-api</code>) ;</li>
+<li>frontend : reconstruisez (<code>npm run build</code>) puis redémarrez (<code>sudo systemctl restart smartcampus-web</code>).</li>
+</ul>
+<h2 id="backend-back-istcenv">Backend — <code>back-istc/.env</code><a class="headerlink" href="#backend-back-istcenv" title="Lien vers cette section">#</a></h2>
+<p>Modèle : <code>back-istc/.env.example</code>.</p>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Obligatoire en production</th>
+<th>Exemple</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SECRET_KEY</code></td>
+<td><strong>Oui</strong></td>
+<td><code>k3J…</code> (50 caractères aléatoires)</td>
+<td>Clé de chiffrement des sessions et jetons. Unique par installation, à ne jamais divulguer. La changer déconnecte tout le monde.</td>
+</tr>
+<tr>
+<td><code>DEBUG</code></td>
+<td><strong>Oui</strong> (<code>False</code>)</td>
+<td><code>False</code></td>
+<td><code>True</code> uniquement sur un poste de test : affiche le détail des erreurs (dangereux en ligne).</td>
+</tr>
+<tr>
+<td><code>ALLOWED_HOSTS</code></td>
+<td><strong>Oui</strong></td>
+<td><code>api.smartcampus.exemple.cm,smartcampus.exemple.cm</code></td>
+<td>Noms de domaine autorisés pour joindre l'API, séparés par des virgules, <strong>sans</strong> <code>https://</code>. Si la variable est absente, une liste par défaut (localhost, istc.tenteeglobal.com, smart.tenteeglobal.com) est utilisée ; si elle est présente, <strong>elle remplace</strong> cette liste. Les origines HTTPS de confiance (CSRF) en sont déduites automatiquement.</td>
+</tr>
+<tr>
+<td><code>DATABASE_URL</code></td>
+<td><strong>Oui</strong></td>
+<td><code>postgresql://utilisateur:motdepasse@127.0.0.1:5432/smartcampus</code></td>
+<td>Connexion à PostgreSQL. Vide = base SQLite locale (<code>db.sqlite3</code>), réservée aux essais.</td>
+</tr>
+<tr>
+<td><code>DB_SSL_REQUIRE</code></td>
+<td>Non</td>
+<td><code>False</code></td>
+<td><code>True</code> si la base est hébergée chez un fournisseur exigeant SSL.</td>
+</tr>
+<tr>
+<td><code>CORS_ALLOWED_ORIGINS</code></td>
+<td>Selon le cas</td>
+<td><code>https://smartcampus.exemple.cm</code></td>
+<td>Adresses <strong>complètes</strong> (avec <code>https://</code>) des interfaces autorisées à appeler l'API, séparées par des virgules. Elles <strong>s'ajoutent</strong> aux adresses déjà autorisées dans le code (localhost:3000, istc.tenteeglobal.com, smart.tenteeglobal.com, istc-smartcampus.vercel.app).</td>
+</tr>
+<tr>
+<td><code>RECAPTCHA_SECRET_KEY</code></td>
+<td>Recommandé</td>
+<td><code>6Lc…</code></td>
+<td>Clé <strong>secrète</strong> reCAPTCHA v2. Si renseignée, la connexion et la préinscription exigent le reCAPTCHA. Vide = pas de vérification.</td>
+</tr>
+<tr>
+<td><code>CONTROLE_DROITS_PERSONNEL</code></td>
+<td>Non</td>
+<td><code>True</code></td>
+<td>Contrôle des droits du personnel par le serveur (activé par défaut). <code>False</code> le désactive temporairement en cas de blocage après une mise à jour, le temps de corriger les rôles.</td>
+</tr>
+<tr>
+<td><code>CELERY_BROKER_URL</code>, <code>CELERY_RESULT_BACKEND</code></td>
+<td>Non</td>
+<td><code>redis://127.0.0.1:6379/0</code></td>
+<td>Tâches en arrière-plan (facultatif, non nécessaire au fonctionnement courant).</td>
+</tr>
+</tbody>
+</table></div>
+<div class="admonition danger">
+<p class="admonition-title">Erreur « Hôte interdit » / DisallowedHost</p>
+<p>Si le domaine utilisé par les navigateurs n'est pas dans <code>ALLOWED_HOSTS</code>, toutes les requêtes échouent (« Invalid HTTP_HOST header »). Ajoutez le domaine, sans <code>https://</code> ni <code>/</code>, puis redémarrez l'API. Voir <a href="depannage.html#hote-interdit-disallowedhost">Dépannage</a>.</p>
+</div>
+<h2 id="frontend-frontendenvlocal">Frontend — <code>frontend/.env.local</code><a class="headerlink" href="#frontend-frontendenvlocal" title="Lien vers cette section">#</a></h2>
+<p>Modèle : <code>frontend/.env.example</code>.</p>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Exemple</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NEXT_PUBLIC_API_BASE_URL</code></td>
+<td><code>https://api.smartcampus.exemple.cm</code></td>
+<td>Adresse de l'API, <strong>sans</strong> <code>/api</code> et sans <code>/</code> final.</td>
+</tr>
+<tr>
+<td><code>NEXT_PUBLIC_RECAPTCHA_SITE_KEY</code></td>
+<td><code>6Lc…</code></td>
+<td>Clé <strong>du site</strong> (publique) reCAPTCHA v2. Doit correspondre à la clé secrète du backend. Vide = reCAPTCHA masqué.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="admonition warning">
+<p class="admonition-title">reCAPTCHA : les deux clés vont ensemble</p>
+<p>Si <code>RECAPTCHA_SECRET_KEY</code> est renseignée côté backend mais que <code>NEXT_PUBLIC_RECAPTCHA_SITE_KEY</code> est vide côté frontend, <strong>personne ne peut plus se connecter</strong> (la case n'est pas affichée mais le serveur l'exige). Renseignez les deux, ou aucune.</p>
+</div>
+<h2 id="reglages-faits-dans-lapplication-pas-dans-env">Réglages faits dans l'application (pas dans .env)<a class="headerlink" href="#reglages-faits-dans-lapplication-pas-dans-env" title="Lien vers cette section">#</a></h2>
+<p>Ces réglages se font par un administrateur dans l'interface, sans toucher au serveur :</p>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Réglage</th>
+<th>Où</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom, logos, couleurs, coordonnées, directeur, signature</td>
+<td><strong>Système</strong> → <em>Apparence &amp; École</em></td>
+</tr>
+<tr>
+<td>Horaires de journée et de pause par cycle</td>
+<td><strong>Système</strong> → <em>Paramètres Globaux</em> → Cycles Globaux</td>
+</tr>
+<tr>
+<td>Pourcentages CC / SN</td>
+<td><strong>Système</strong> → <em>Paramètres Globaux</em> → Calcul des Notes</td>
+</tr>
+<tr>
+<td>Rôles et droits</td>
+<td><strong>Système</strong> → <em>Rôles</em></td>
+</tr>
+<tr>
+<td>Année académique active</td>
+<td><strong>Pédagogie</strong> → Structure Académique → <em>Années Académiques</em></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="duree-des-sessions">Durée des sessions<a class="headerlink" href="#duree-des-sessions" title="Lien vers cette section">#</a></h2>
+<p>Définie dans <code>back-istc/smart_back/settings.py</code> (<code>SIMPLE_JWT</code>) : jeton d'accès valable <strong>16 heures</strong>, renouvelable pendant <strong>1 jour</strong>. Au-delà, l'utilisateur doit se reconnecter.</p>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../installation/deploiement-serveur.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Mise en ligne sur un serveur</strong></a><a class="suiv" href="../installation/sauvegardes.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Sauvegardes et restauration</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#backend-back-istcenv">Backend — back-istc/.env</a></li><li><a href="#frontend-frontendenvlocal">Frontend — frontend/.env.local</a></li><li><a href="#reglages-faits-dans-lapplication-pas-dans-env">Réglages faits dans l&#x27;application (pas dans .env)</a></li><li><a href="#duree-des-sessions">Durée des sessions</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../assets/donnees.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

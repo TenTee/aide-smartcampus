@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr" data-racine="../../" data-page="guide/administration/systeme.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Système (paramètres, utilisateurs, rôles, apparence) · SmartCampus · Aide</title>
+<meta name="description" content="Menu : Système — Accès : administrateurs uniquement (rôles admin / superadmin ). La page « Administration Système » comporte quatre onglets : Paramètres Globaux">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../../guide/index.html" class="onglet" aria-current="true">Guide d&#x27;utilisation</a><a href="../../installation/index.html" class="onglet">Installation</a><a href="../../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../../guide/index.html" class="onglet" aria-current="true">Guide d&#x27;utilisation</a><a href="../../installation/index.html" class="onglet">Installation</a><a href="../../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+    <p class="nav-titre">Guide d&#x27;utilisation</p><ul class="nav-arbre"><li><a href="../../guide/index.html" data-page="guide/index.html">Présentation</a></li><li><a href="../../guide/premiers-pas.html" data-page="guide/premiers-pas.html">Premiers pas</a></li><li><a href="../../guide/roles-et-acces.html" data-page="guide/roles-et-acces.html">Rôles et droits d&#x27;accès</a></li><li><a href="../../guide/demarrer-une-annee.html" data-page="guide/demarrer-une-annee.html">Démarrer une nouvelle année</a></li><li><a href="../../guide/preinscription-candidat.html" data-page="guide/preinscription-candidat.html">Candidats — préinscription en ligne</a></li><li class="groupe"><details open><summary><a href="../../guide/administration/index.html" data-page="guide/administration/index.html">Administration</a></summary><ul><li><a href="../../guide/administration/tableau-de-bord.html" data-page="guide/administration/tableau-de-bord.html">Tableau de bord</a></li><li><a href="../../guide/administration/structure-academique.html" data-page="guide/administration/structure-academique.html">Structure académique</a></li><li><a href="../../guide/administration/cours.html" data-page="guide/administration/cours.html">Cours et modules</a></li><li><a href="../../guide/administration/etudiants.html" data-page="guide/administration/etudiants.html">Étudiants</a></li><li><a href="../../guide/administration/enseignants.html" data-page="guide/administration/enseignants.html">Enseignants (formateurs)</a></li><li><a href="../../guide/administration/emploi-du-temps.html" data-page="guide/administration/emploi-du-temps.html">Emploi du temps</a></li><li><a href="../../guide/administration/notes.html" data-page="guide/administration/notes.html">Notes et relevés</a></li><li><a href="../../guide/administration/banque-epreuves.html" data-page="guide/administration/banque-epreuves.html">Banque d&#x27;épreuves</a></li><li><a href="../../guide/administration/assiduite.html" data-page="guide/administration/assiduite.html">Assiduité</a></li><li><a href="../../guide/administration/coordonnateurs.html" data-page="guide/administration/coordonnateurs.html">Coordonnateurs de filière</a></li><li><a href="../../guide/administration/preinscriptions.html" data-page="guide/administration/preinscriptions.html">Préinscriptions (validation)</a></li><li><a href="../../guide/administration/scolarite.html" data-page="guide/administration/scolarite.html">Scolarité et paiements</a></li><li><a href="../../guide/administration/apercu-financier.html" data-page="guide/administration/apercu-financier.html">Aperçu financier (revenus et dépenses)</a></li><li><a href="../../guide/administration/salaires.html" data-page="guide/administration/salaires.html">Salaires (personnel et formateurs)</a></li><li><a href="../../guide/administration/heures-vacataires.html" data-page="guide/administration/heures-vacataires.html">Heures des vacataires</a></li><li><a href="../../guide/administration/inventaire.html" data-page="guide/administration/inventaire.html">Inventaire et demandes</a></li><li><a href="../../guide/administration/personnel-conges.html" data-page="guide/administration/personnel-conges.html">Personnel et congés</a></li><li><a href="../../guide/administration/systeme.html" data-page="guide/administration/systeme.html" aria-current="page">Système (paramètres, utilisateurs, rôles)</a></li></ul></details></li><li><a href="../../guide/portail-formateur.html" data-page="guide/portail-formateur.html">Portail formateur</a></li><li><a href="../../guide/coordonnateur.html" data-page="guide/coordonnateur.html">Coordonnateur de filière</a></li><li><a href="../../guide/portail-etudiant.html" data-page="guide/portail-etudiant.html">Portail étudiant</a></li><li><a href="../../guide/faq.html" data-page="guide/faq.html">Questions fréquentes</a></li><li><a href="../../guide/glossaire.html" data-page="guide/glossaire.html">Glossaire</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../../index.html">Accueil</a> <span aria-hidden="true">›</span> <a href="../../guide/index.html">Guide d&#x27;utilisation</a> <span aria-hidden="true">›</span> <a href="../../guide/administration/index.html">Administration</a></nav>
+      <h1>Système (paramètres, utilisateurs, rôles, apparence)</h1>
+      <div id="bandeau-parcours"></div>
+      
+<p><strong>Menu :</strong> Système — <strong>Accès :</strong> administrateurs uniquement (rôles <code>admin</code> / <code>superadmin</code>).</p>
+<p>La page « Administration Système » comporte quatre onglets : <em>Paramètres Globaux</em>, <em>Utilisateurs</em>, <em>Rôles</em>, <em>Apparence &amp; École</em>.</p>
+<h2 id="onglet-parametres-globaux">Onglet <em>Paramètres Globaux</em><a class="headerlink" href="#onglet-parametres-globaux" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Paramètres Globaux : cycles et calcul des notes"><img src="../../images/captures/37_systeme_parametres.jpg" alt="Paramètres Globaux : cycles et calcul des notes" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Paramètres Globaux : cycles et calcul des notes</figcaption></figure>
+<h3 id="cycles-globaux">Cycles Globaux<a class="headerlink" href="#cycles-globaux" title="Lien vers cette section">#</a></h3>
+<p>Les types de cycles (Licence, BTS, Master…) et leurs <strong>horaires</strong>, utilisés par l'emploi du temps.</p>
+<ol>
+<li><strong>Nouveau</strong> (ou crayon pour modifier un cycle existant).</li>
+<li>Remplissez « Nom du cycle (ex: Licence) », « Code (ex: LIC) », « Début Journée », « Fin Journée », « Début Pause », « Fin Pause ».</li>
+<li>Enregistrez.</li>
+</ol>
+<p>Par défaut : journée de <strong>08:00 à 18:00</strong>, pause de <strong>12:00 à 13:00</strong>. Aucun cours ne peut être programmé pendant la pause ni en dehors de la journée.</p>
+<h3 id="calcul-des-notes">Calcul des Notes<a class="headerlink" href="#calcul-des-notes" title="Lien vers cette section">#</a></h3>
+<p>« Pourcentage CC (%) » et « Pourcentage SN (%) » (par défaut 30 / 70). La somme doit être égale à 100. Cliquez sur <strong>Mettre à jour les coefficients</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Effet sur les notes existantes</p>
+<p><strong>Toutes</strong> les notes déjà saisies, y compris celles des années précédentes, sont <strong>converties</strong> à la nouvelle échelle (une note CC de 15/30 devient 20/40 si le CC passe à 40 %). Le résultat final de chaque étudiant ne change pas, mais les relevés des anciennes années afficheront les nouvelles échelles. Faites ce réglage <strong>une fois pour toutes</strong>, avant les premières saisies.</p>
+</div>
+<h2 id="onglet-utilisateurs-comptes-du-personnel">Onglet <em>Utilisateurs</em> — comptes du personnel<a class="headerlink" href="#onglet-utilisateurs-comptes-du-personnel" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : La gestion des utilisateurs"><img src="../../images/captures/37b_systeme_utilisateurs.jpg" alt="La gestion des utilisateurs" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>La gestion des utilisateurs</figcaption></figure>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : La fenêtre « Créer un Utilisateur »"><img src="../../images/captures/37c_utilisateur_ajout.jpg" alt="La fenêtre « Créer un Utilisateur »" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>La fenêtre « Créer un Utilisateur »</figcaption></figure>
+<p>« Gestion des Utilisateurs » liste tous les comptes (Nom Complet, Username / Email, Rôle).</p>
+<h3 id="creer-un-compte">Créer un compte<a class="headerlink" href="#creer-un-compte" title="Lien vers cette section">#</a></h3>
+<ol>
+<li><strong>Nouvel Utilisateur</strong>.</li>
+<li>Remplissez « Noms », « Prénoms », « Email » et le « Rôle assigné ».</li>
+<li><strong>Enregistrer</strong>.</li>
+<li>La fenêtre « Accès Utilisateur » affiche le <strong>nom d'utilisateur</strong> (généré : <code>noms.prénoms</code> + 3 chiffres) et le <strong>mot de passe temporaire</strong>. Utilisez l'icône <strong>Copier le mot de passe</strong>, transmettez les identifiants, puis cliquez sur <strong>J'ai compris</strong>.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Le mot de passe n'est affiché qu'une seule fois.</p>
+</div>
+<h3 id="reinitialiser-un-mot-de-passe">Réinitialiser un mot de passe<a class="headerlink" href="#reinitialiser-un-mot-de-passe" title="Lien vers cette section">#</a></h3>
+<p>Icône <strong>Changer le mot de passe</strong> sur la ligne : un nouveau mot de passe temporaire s'affiche.</p>
+<h3 id="modifier-desactiver-supprimer">Modifier, désactiver, supprimer<a class="headerlink" href="#modifier-desactiver-supprimer" title="Lien vers cette section">#</a></h3>
+<p>Le crayon permet de changer le rôle ou les informations. La corbeille supprime le compte.</p>
+<div class="admonition note">
+<p class="admonition-title">Comptes formateurs et étudiants</p>
+<p>Les comptes des formateurs se créent depuis <strong>Enseignants</strong> et ceux des étudiants automatiquement. Ne créez pas ici de compte avec le rôle <em>formateur</em> ou <em>étudiant</em> : il ne serait relié à aucun dossier.</p>
+</div>
+<h2 id="creer-un-role">Onglet <em>Rôles</em> — créer un rôle<a class="headerlink" href="#creer-un-role" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Les rôles et leurs droits"><img src="../../images/captures/37d_systeme_roles.jpg" alt="Les rôles et leurs droits" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Les rôles et leurs droits</figcaption></figure>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : La fenêtre « Créer un Rôle »"><img src="../../images/captures/37e_role_ajout.jpg" alt="La fenêtre « Créer un Rôle »" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>La fenêtre « Créer un Rôle »</figcaption></figure>
+<p>« Rôles &amp; Autorisations » liste les rôles (Code, Libellé, Droits d'accès).</p>
+<ol>
+<li><strong>Nouveau Rôle</strong>.</li>
+<li>« Code unique (ex: ADMIN) » : un code court sans espace (ex. <code>secretaire</code>, <code>comptable</code>). Les codes <code>admin</code> et <code>superadmin</code> donnent accès à tout.</li>
+<li>« Libellé complet » : le nom affiché (ex. « Secrétaire de direction »).</li>
+<li>Pour chaque domaine — <strong>Étudiants</strong>, <strong>Pédagogie (Notes, Cours)</strong>, <strong>Finances</strong>, <strong>Logistique / Inventaire</strong>, <strong>Ressources Humaines</strong> — choisissez <strong>Aucun</strong>, <strong>Lecture</strong> ou <strong>Écriture</strong>.</li>
+<li><strong>Enregistrer</strong>.</li>
+</ol>
+<p>Les droits sont expliqués dans <a href="../roles-et-acces.html">Rôles et droits d'accès</a>. Les personnes concernées doivent <strong>se déconnecter puis se reconnecter</strong> pour voir leurs nouveaux droits.</p>
+<h2 id="onglet-apparence-ecole">Onglet <em>Apparence &amp; École</em><a class="headerlink" href="#onglet-apparence-ecole" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Configuration de l'établissement et apparence"><img src="../../images/captures/37f_systeme_apparence.jpg" alt="Configuration de l'établissement et apparence" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Configuration de l'établissement et apparence</figcaption></figure>
+<p>« Configuration de l'Établissement &amp; Apparence Globale ». Ces données s'appliquent partout, <strong>y compris sur les documents PDF générés</strong> (relevés, certificats, cartes).</p>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Bloc</th>
+<th>Champs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identité visuelle</td>
+<td><strong>Logo principal</strong> (affiché dans le menu et sur la page de connexion), <strong>Logo documents</strong> (en-tête des relevés et certificats), « Couleur Primaire », « Couleur Secondaire », « Couleur Texte », « Typographie (CSS Font Family) »</td>
+</tr>
+<tr>
+<td>Informations de contact</td>
+<td>« Nom de l'établissement », « Téléphone », « Email », « Adresse », « Ville », « Site Web », « Slogan / Devise »</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>« Nom du Directeur », « Titre du Directeur », <strong>Signature</strong> (image affichée sur les documents)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cliquez sur <strong>Enregistrer la configuration</strong>. Rechargez la page pour voir les nouvelles couleurs.</p>
+<div class="admonition tip">
+<p class="admonition-title">Images</p>
+<p>Utilisez des images PNG à fond transparent : logo d'environ 400 × 400 pixels, signature d'environ 600 × 200 pixels.</p>
+</div>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../../guide/administration/personnel-conges.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Personnel et congés</strong></a><a class="suiv" href="../../guide/portail-formateur.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Portail formateur</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#onglet-parametres-globaux">Onglet Paramètres Globaux</a><ul><li><a href="#cycles-globaux">Cycles Globaux</a></li><li><a href="#calcul-des-notes">Calcul des Notes</a></li></ul></li><li><a href="#onglet-utilisateurs-comptes-du-personnel">Onglet Utilisateurs — comptes du personnel</a><ul><li><a href="#creer-un-compte">Créer un compte</a></li><li><a href="#reinitialiser-un-mot-de-passe">Réinitialiser un mot de passe</a></li><li><a href="#modifier-desactiver-supprimer">Modifier, désactiver, supprimer</a></li></ul></li><li><a href="#creer-un-role">Onglet Rôles — créer un rôle</a></li><li><a href="#onglet-apparence-ecole">Onglet Apparence &amp; École</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../../assets/donnees.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

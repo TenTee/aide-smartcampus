@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="fr" data-racine="../" data-page="developpeurs/applications.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carte des applications · SmartCampus · Aide</title>
+<meta name="description" content="Tout pour utiliser, installer et faire évoluer la plateforme SmartCampus">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+    <p class="nav-titre">Développeurs</p><ul class="nav-arbre"><li><a href="../developpeurs/index.html" data-page="developpeurs/index.html">Présentation</a></li><li><a href="../developpeurs/architecture.html" data-page="developpeurs/architecture.html">Architecture</a></li><li><a href="../developpeurs/applications.html" data-page="developpeurs/applications.html" aria-current="page">Carte des applications</a></li><li><a href="../developpeurs/permissions.html" data-page="developpeurs/permissions.html">Permissions et cloisonnement</a></li><li><a href="../developpeurs/tests.html" data-page="developpeurs/tests.html">Tests automatisés</a></li><li><a href="../developpeurs/ajouter-une-fonctionnalite.html" data-page="developpeurs/ajouter-une-fonctionnalite.html">Ajouter une fonctionnalité</a></li><li><a href="../developpeurs/conventions.html" data-page="developpeurs/conventions.html">Conventions de code</a></li><li><a href="../developpeurs/api.html" data-page="developpeurs/api.html">Référence API</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> <a href="../developpeurs/index.html">Développeurs</a></nav>
+      <h1>Carte des applications</h1>
+      <div id="bandeau-parcours"></div>
+      
+<h2 id="backend-back-istc">Backend (<code>back-istc/</code>)<a class="headerlink" href="#backend-back-istc" title="Lien vers cette section">#</a></h2>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Préfixe d'URL</th>
+<th>Responsabilité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>smart_back</code></td>
+<td>—</td>
+<td>Projet : <code>settings.py</code>, <code>urls.py</code>, <code>testing.py</code> (fabriques de test), <code>test_audit.py</code></td>
+</tr>
+<tr>
+<td><code>users</code></td>
+<td><code>/api/auth/</code></td>
+<td><code>CustomUser</code> (username/mot de passe générés), <code>Role</code> (5 domaines × none/lecture/ecriture), login JWT, reCAPTCHA (<code>recaptcha.py</code>), <code>PortalAccessMiddleware</code>, <code>permissions.py</code></td>
+</tr>
+<tr>
+<td><code>academique</code></td>
+<td><code>/api/v2/</code></td>
+<td>Structure (universités, départements, filières, spécialités, cycles, niveaux, classes, années, salles), <code>ParametresGlobaux</code>, <code>CycleGlobal</code>, préinscriptions (+ approbation), inscriptions, épreuves, affectations, configuration établissement, middlewares d'année</td>
+</tr>
+<tr>
+<td><code>etudiants</code></td>
+<td><code>/api/etudiants/</code></td>
+<td>Dossier étudiant (matricule auto), <code>Inscription</code>, sanctions, portail (<code>me/</code>, situation, historique, carte, certificat)</td>
+</tr>
+<tr>
+<td><code>formateurs</code></td>
+<td><code>/api/formateurs/</code></td>
+<td>Formateurs (permanent / vacataire), comptes portail, <strong>API du portail formateur</strong> (<code>portal/…</code>), documents de cours</td>
+</tr>
+<tr>
+<td><code>modules</code></td>
+<td><code>/api/modules/</code></td>
+<td>Cours / modules (coefficient, semestre, classes rattachées)</td>
+</tr>
+<tr>
+<td><code>emploidutemps</code></td>
+<td><code>/api/emploi-du-temps/</code></td>
+<td>Créneaux + règles (<code>clean()</code>), documents d'emploi du temps officiels</td>
+</tr>
+<tr>
+<td><code>notes</code></td>
+<td><code>/api/notes/</code></td>
+<td>Notes (CC / SN / rattrapage), saisie groupée, validation, relevés, rattrapages, portail (<code>me/</code>)</td>
+</tr>
+<tr>
+<td><code>assiduite</code></td>
+<td><code>/api/assiduite/</code></td>
+<td>Absences et retards des étudiants</td>
+</tr>
+<tr>
+<td><code>paiements</code></td>
+<td><code>/api/paiements/</code>, <code>/api/v2/frais/</code> …</td>
+<td>Frais, paiements, bourses, réductions, échéanciers (classe / filière / étudiant), alertes, tableau de bord, <code>finance.py</code></td>
+</tr>
+<tr>
+<td><code>paie</code></td>
+<td><code>/api/paie/</code></td>
+<td>Primes, retenues, avances, campagnes, bulletins, statistiques</td>
+</tr>
+<tr>
+<td><code>vacations</code></td>
+<td><code>/api/vacations/</code></td>
+<td>Coordinations de filière, pointages, récaps mensuels, validation finance, « mes heures »</td>
+</tr>
+<tr>
+<td><code>personnels</code></td>
+<td><code>/api/personnels/</code></td>
+<td>Personnel non enseignant, ancienneté, soldes de congés</td>
+</tr>
+<tr>
+<td><code>conges</code></td>
+<td><code>/api/conges/</code></td>
+<td>Congés (jours ouvrés, solde)</td>
+</tr>
+<tr>
+<td><code>inventaires</code></td>
+<td><code>/api/inventaires/</code></td>
+<td>Articles, exemplaires, mouvements</td>
+</tr>
+<tr>
+<td><code>demandes</code></td>
+<td><code>/api/demandes/</code></td>
+<td>Demandes de matériel (soumettre → approuver → livrer)</td>
+</tr>
+<tr>
+<td><code>revenus</code>, <code>depenses</code></td>
+<td><code>/api/revenus/</code>, <code>/api/depenses/</code></td>
+<td>Trésorerie</td>
+</tr>
+<tr>
+<td><code>communication</code></td>
+<td><code>/api/communication/</code></td>
+<td>Messages / actualités (modèle <code>Communication</code>)</td>
+</tr>
+<tr>
+<td><code>files</code></td>
+<td><code>/api/files/</code></td>
+<td>Fichiers génériques (upload, téléchargement)</td>
+</tr>
+<tr>
+<td><code>logs</code></td>
+<td><code>/api/logs/</code></td>
+<td>Journal d'activité</td>
+</tr>
+<tr>
+<td><code>admin_api</code></td>
+<td>—</td>
+<td>Ancienne API (students / trainers) <strong>non branchée</strong> dans <code>smart_back/urls.py</code> : candidate à la suppression</td>
+</tr>
+<tr>
+<td><code>tests/</code></td>
+<td>—</td>
+<td><strong>Tests de flux</strong> de bout en bout (voir <a href="tests.html">Tests</a>)</td>
+</tr>
+<tr>
+<td><code>scripts/</code></td>
+<td>—</td>
+<td>Sauvegarde PostgreSQL, scripts de données de démonstration (ne jamais lancer en prod)</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="frontend-frontendsrc">Frontend (<code>frontend/src/</code>)<a class="headerlink" href="#frontend-frontendsrc" title="Lien vers cette section">#</a></h2>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Dossier</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app/(dashboard)/…</code></td>
+<td>Pages de l'administration (une page = un dossier <code>page.js</code>)</td>
+</tr>
+<tr>
+<td><code>app/(formateur-portal)/formateur-portal/…</code></td>
+<td>Portail formateur</td>
+</tr>
+<tr>
+<td><code>app/(portal)/portal/…</code></td>
+<td>Portail étudiant</td>
+</tr>
+<tr>
+<td><code>app/login</code>, <code>app/preinscription</code></td>
+<td>Pages publiques</td>
+</tr>
+<tr>
+<td><code>app/api/media-download/route.js</code></td>
+<td>Proxy de téléchargement des fichiers</td>
+</tr>
+<tr>
+<td><code>components/layout/</code></td>
+<td><code>Header</code> (sélecteur d'année, profil), <code>Sidebar</code>, <code>FormateurSidebar</code>, <code>StudentSidebar</code>, <code>PortalGuard</code></td>
+</tr>
+<tr>
+<td><code>components/&lt;domaine&gt;/</code></td>
+<td>Composants par domaine : <code>finances/</code>, <code>grades/</code>, <code>schedule/</code>, <code>students/</code>, <code>system/</code>, <code>settings/</code>, <code>vacations/</code>, <code>importExport/</code>, <code>certificates/</code></td>
+</tr>
+<tr>
+<td><code>components/common/</code></td>
+<td>Squelettes de chargement, <code>ErrorState</code>, <code>SearchableSelect</code></td>
+</tr>
+<tr>
+<td><code>services/api/</code></td>
+<td><code>client.js</code> (axios, intercepteurs, <code>getMediaUrl</code>, <code>clearSession</code>), <code>endpoints.js</code>, <code>services.js</code></td>
+</tr>
+<tr>
+<td><code>config/routes.js</code></td>
+<td>Menus des trois espaces</td>
+</tr>
+<tr>
+<td><code>utils/permissions.js</code></td>
+<td><code>useUserPermissions</code>, <code>hasReadAccess</code>, rôles admin</td>
+</tr>
+<tr>
+<td><code>context/</code></td>
+<td>Année académique, barre latérale</td>
+</tr>
+<tr>
+<td><code>theme/</code></td>
+<td>Thème MUI</td>
+</tr>
+</tbody>
+</table></div>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../developpeurs/architecture.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Architecture</strong></a><a class="suiv" href="../developpeurs/permissions.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Permissions et cloisonnement</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#backend-back-istc">Backend (back-istc/)</a></li><li><a href="#frontend-frontendsrc">Frontend (frontend/src/)</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../assets/donnees.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

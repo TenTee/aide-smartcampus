@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr" data-racine="../" data-page="installation/depannage.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dépannage · SmartCampus · Aide</title>
+<meta name="description" content="Tout pour utiliser, installer et faire évoluer la plateforme SmartCampus">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet" aria-current="true">Installation</a><a href="../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet" aria-current="true">Installation</a><a href="../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+    <p class="nav-titre">Installation</p><ul class="nav-arbre"><li><a href="../installation/index.html" data-page="installation/index.html">Présentation</a></li><li><a href="../installation/prerequis.html" data-page="installation/prerequis.html">Prérequis</a></li><li><a href="../installation/installation-locale.html" data-page="installation/installation-locale.html">Installation sur un poste (test)</a></li><li><a href="../installation/deploiement-serveur.html" data-page="installation/deploiement-serveur.html">Mise en ligne sur un serveur</a></li><li><a href="../installation/configuration.html" data-page="installation/configuration.html">Fichier de configuration (.env)</a></li><li><a href="../installation/sauvegardes.html" data-page="installation/sauvegardes.html">Sauvegardes et restauration</a></li><li><a href="../installation/mise-a-jour.html" data-page="installation/mise-a-jour.html">Mettre à jour la plateforme</a></li><li><a href="../installation/depannage.html" data-page="installation/depannage.html" aria-current="page">Dépannage</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> <a href="../installation/index.html">Installation et configuration</a></nav>
+      <h1>Dépannage</h1>
+      <div id="bandeau-parcours"></div>
+      
+<h2 id="ou-regarder-en-premier">Où regarder en premier<a class="headerlink" href="#ou-regarder-en-premier" title="Lien vers cette section">#</a></h2>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Ce qu'elle montre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo systemctl status smartcampus-api</code></td>
+<td>L'API tourne-t-elle ?</td>
+</tr>
+<tr>
+<td><code>sudo journalctl -u smartcampus-api -n 100 --no-pager</code></td>
+<td>Les 100 dernières lignes du journal de l'API (erreurs Python)</td>
+</tr>
+<tr>
+<td><code>sudo journalctl -u smartcampus-web -n 100 --no-pager</code></td>
+<td>Journal du frontend</td>
+</tr>
+<tr>
+<td><code>sudo tail -n 50 /var/log/nginx/error.log</code></td>
+<td>Erreurs du serveur web</td>
+</tr>
+<tr>
+<td>Navigateur : <span class="keys"><kbd class="key-f12">F12</kbd></span> → onglet <em>Console</em> / <em>Réseau</em></td>
+<td>L'erreur exacte renvoyée à l'écran (code 400, 401, 403, 404, 500)</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="erreurs-frequentes">Erreurs fréquentes<a class="headerlink" href="#erreurs-frequentes" title="Lien vers cette section">#</a></h2>
+<h3 id="hote-interdit-disallowedhost">Hôte interdit (DisallowedHost)<a class="headerlink" href="#hote-interdit-disallowedhost" title="Lien vers cette section">#</a></h3>
+<p><strong>Symptôme :</strong> « Invalid HTTP_HOST header: 'smartcampus.exemple.cm' » dans le journal, ou erreur 400 sur toutes les requêtes.</p>
+<p><strong>Cause :</strong> le domaine n'est pas dans <code>ALLOWED_HOSTS</code>.</p>
+<p><strong>Solution :</strong> dans <code>back-istc/.env</code>, ajoutez le domaine <strong>sans</strong> <code>https://</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="na">ALLOWED_HOSTS</span><span class="o">=</span><span class="s">smartcampus.exemple.cm,api.smartcampus.exemple.cm,localhost,127.0.0.1</span>
+</code></pre></div>
+<p>puis <code>sudo systemctl restart smartcampus-api</code>.</p>
+<h3 id="erreur-cors-dans-la-console-du-navigateur">Erreur CORS dans la console du navigateur<a class="headerlink" href="#erreur-cors-dans-la-console-du-navigateur" title="Lien vers cette section">#</a></h3>
+<p><strong>Symptôme :</strong> « blocked by CORS policy » ; la page de connexion ne réagit pas.</p>
+<p><strong>Cause :</strong> l'adresse de l'interface n'est pas autorisée par l'API.</p>
+<p><strong>Solution :</strong> <code>CORS_ALLOWED_ORIGINS=https://smartcampus.exemple.cm</code> (avec <code>https://</code>, sans <code>/</code> final) dans <code>back-istc/.env</code>, puis redémarrer l'API.</p>
+<h3 id="impossible-de-se-connecter-alors-que-le-mot-de-passe-est-bon">Impossible de se connecter alors que le mot de passe est bon<a class="headerlink" href="#impossible-de-se-connecter-alors-que-le-mot-de-passe-est-bon" title="Lien vers cette section">#</a></h3>
+<ol>
+<li>Le message parle de reCAPTCHA ? Vérifiez que <strong>les deux clés</strong> sont cohérentes (<a href="configuration.html#frontend-frontendenvlocal">Configuration</a>) et que le serveur peut joindre <code>www.google.com</code> (sinon « Vérification reCAPTCHA indisponible »).</li>
+<li>L'interface appelle-t-elle la bonne API ? Vérifiez <code>NEXT_PUBLIC_API_BASE_URL</code> puis <strong>reconstruisez</strong> le frontend.</li>
+<li>Le compte est-il actif ? (<strong>Système</strong> → <em>Utilisateurs</em>.)</li>
+</ol>
+<h3 id="la-page-tourne-indefiniment-apres-la-connexion">La page tourne indéfiniment après la connexion<a class="headerlink" href="#la-page-tourne-indefiniment-apres-la-connexion" title="Lien vers cette section">#</a></h3>
+<ul>
+<li>Videz les données du site : <span class="keys"><kbd class="key-f12">F12</kbd></span> → <em>Application</em> → <em>Stockage</em> → « Effacer les données du site », puis reconnectez-vous.</li>
+<li>Vérifiez que l'année active existe (<strong>Structure Académique</strong> → <em>Années Académiques</em>, une année cochée « Est Active »).</li>
+<li>Consultez le journal de l'API à la recherche d'une erreur 500.</li>
+</ul>
+<h3 id="erreur-500-sur-une-page-apres-une-mise-a-jour">Erreur 500 sur une page après une mise à jour<a class="headerlink" href="#erreur-500-sur-une-page-apres-une-mise-a-jour" title="Lien vers cette section">#</a></h3>
+<p>Presque toujours une migration oubliée :</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>back-istc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>migrate
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>smartcampus-api
+</code></pre></div>
+<h3 id="les-photos-logos-ou-justificatifs-ne-saffichent-pas-404">Les photos, logos ou justificatifs ne s'affichent pas (404)<a class="headerlink" href="#les-photos-logos-ou-justificatifs-ne-saffichent-pas-404" title="Lien vers cette section">#</a></h3>
+<p>Avec <code>DEBUG=False</code>, ces fichiers sont servis par Nginx : vérifiez le bloc <code>location /media/</code> (<a href="deploiement-serveur.html#6-nginx-adresses-publiques-et-https">Mise en ligne</a>) et les droits de lecture du dossier <code>media/</code>.</p>
+<h3 id="request-entity-too-large-413-en-deposant-un-fichier">« Request Entity Too Large » (413) en déposant un fichier<a class="headerlink" href="#request-entity-too-large-413-en-deposant-un-fichier" title="Lien vers cette section">#</a></h3>
+<p>Augmentez <code>client_max_body_size</code> dans la configuration Nginx (ex. <code>25M</code>), puis <code>sudo systemctl reload nginx</code>.</p>
+<h3 id="les-utilisateurs-voient-des-pages-vides-apres-le-changement-dannee">Les utilisateurs voient des pages vides après le changement d'année<a class="headerlink" href="#les-utilisateurs-voient-des-pages-vides-apres-le-changement-dannee" title="Lien vers cette section">#</a></h3>
+<p>Les années non actives ne sont accessibles qu'au super-administrateur. Demandez aux utilisateurs de choisir l'année <em>(Active)</em> dans le sélecteur du haut et de recharger la page.</p>
+<h3 id="acces-refuse-votre-role-na-pas-le-droit">« Accès refusé : votre rôle n'a pas le droit … »<a class="headerlink" href="#acces-refuse-votre-role-na-pas-le-droit" title="Lien vers cette section">#</a></h3>
+<p>Le serveur applique les droits du rôle. Vérifiez le rôle de la personne (<strong>Système</strong> → <em>Rôles</em>) et donnez-lui le droit <strong>Lecture</strong> ou <strong>Écriture</strong> sur le domaine indiqué dans le message, puis demandez-lui de se reconnecter.</p>
+<p><code>python manage.py audit_droits</code> liste tous les comptes du personnel avec leurs droits et signale ceux qui n'en ont aucun.</p>
+<p>En cas de blocage général juste après une mise à jour : <code>CONTROLE_DROITS_PERSONNEL=False</code> dans <code>back-istc/.env</code>, redémarrer l'API, corriger les rôles, puis remettre <code>True</code>.</p>
+<h3 id="un-utilisateur-ne-voit-pas-un-menu">Un utilisateur ne voit pas un menu<a class="headerlink" href="#un-utilisateur-ne-voit-pas-un-menu" title="Lien vers cette section">#</a></h3>
+<p>Ce n'est pas une panne : son rôle n'a pas le droit correspondant. Voir <a href="../guide/roles-et-acces.html">Rôles et droits d'accès</a>.</p>
+<h2 id="commandes-utiles">Commandes utiles<a class="headerlink" href="#commandes-utiles" title="Lien vers cette section">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home/bitnami/istc-projects/back-istc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+
+python<span class="w"> </span>manage.py<span class="w"> </span>check<span class="w"> </span>--deploy<span class="w">          </span><span class="c1"># contrôle de la configuration de production</span>
+python<span class="w"> </span>manage.py<span class="w"> </span>createsuperuser<span class="w">         </span><span class="c1"># créer un nouveau super-administrateur</span>
+python<span class="w"> </span>manage.py<span class="w"> </span>changepassword<span class="w"> </span>&lt;nom&gt;<span class="w">    </span><span class="c1"># changer le mot de passe d'un compte</span>
+python<span class="w"> </span>manage.py<span class="w"> </span>showmigrations<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"\[ \]"</span><span class="w">   </span><span class="c1"># migrations non appliquées</span>
+python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-q<span class="w">                      </span><span class="c1"># lancer les tests automatiques</span>
+</code></pre></div>
+<h2 id="interface-dadministration-technique">Interface d'administration technique<a class="headerlink" href="#interface-dadministration-technique" title="Lien vers cette section">#</a></h2>
+<p><code>https://api.smartcampus.exemple.cm/admin/</code> donne accès, pour le <strong>super-administrateur</strong>, à toutes les tables (corrections exceptionnelles, sanctions disciplinaires, paiements). À utiliser avec prudence : les contrôles de l'application n'y sont pas tous appliqués.</p>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../installation/mise-a-jour.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Mettre à jour la plateforme</strong></a><a class="suiv" href="../developpeurs/index.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Documentation développeurs</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#ou-regarder-en-premier">Où regarder en premier</a></li><li><a href="#erreurs-frequentes">Erreurs fréquentes</a><ul><li><a href="#hote-interdit-disallowedhost">Hôte interdit (DisallowedHost)</a></li><li><a href="#erreur-cors-dans-la-console-du-navigateur">Erreur CORS dans la console du navigateur</a></li><li><a href="#impossible-de-se-connecter-alors-que-le-mot-de-passe-est-bon">Impossible de se connecter alors que le mot de passe est bon</a></li><li><a href="#la-page-tourne-indefiniment-apres-la-connexion">La page tourne indéfiniment après la connexion</a></li><li><a href="#erreur-500-sur-une-page-apres-une-mise-a-jour">Erreur 500 sur une page après une mise à jour</a></li><li><a href="#les-photos-logos-ou-justificatifs-ne-saffichent-pas-404">Les photos, logos ou justificatifs ne s&#x27;affichent pas (404)</a></li><li><a href="#request-entity-too-large-413-en-deposant-un-fichier">« Request Entity Too Large » (413) en déposant un fichier</a></li><li><a href="#les-utilisateurs-voient-des-pages-vides-apres-le-changement-dannee">Les utilisateurs voient des pages vides après le changement d&#x27;année</a></li><li><a href="#acces-refuse-votre-role-na-pas-le-droit">« Accès refusé : votre rôle n&#x27;a pas le droit … »</a></li><li><a href="#un-utilisateur-ne-voit-pas-un-menu">Un utilisateur ne voit pas un menu</a></li></ul></li><li><a href="#commandes-utiles">Commandes utiles</a></li><li><a href="#interface-dadministration-technique">Interface d&#x27;administration technique</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../assets/donnees.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fr" data-racine="../" data-page="developpeurs/tests.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tests automatisés · SmartCampus · Aide</title>
+<meta name="description" content="Tout pour utiliser, installer et faire évoluer la plateforme SmartCampus">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+    <p class="nav-titre">Développeurs</p><ul class="nav-arbre"><li><a href="../developpeurs/index.html" data-page="developpeurs/index.html">Présentation</a></li><li><a href="../developpeurs/architecture.html" data-page="developpeurs/architecture.html">Architecture</a></li><li><a href="../developpeurs/applications.html" data-page="developpeurs/applications.html">Carte des applications</a></li><li><a href="../developpeurs/permissions.html" data-page="developpeurs/permissions.html">Permissions et cloisonnement</a></li><li><a href="../developpeurs/tests.html" data-page="developpeurs/tests.html" aria-current="page">Tests automatisés</a></li><li><a href="../developpeurs/ajouter-une-fonctionnalite.html" data-page="developpeurs/ajouter-une-fonctionnalite.html">Ajouter une fonctionnalité</a></li><li><a href="../developpeurs/conventions.html" data-page="developpeurs/conventions.html">Conventions de code</a></li><li><a href="../developpeurs/api.html" data-page="developpeurs/api.html">Référence API</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> <a href="../developpeurs/index.html">Développeurs</a></nav>
+      <h1>Tests automatisés</h1>
+      <div id="bandeau-parcours"></div>
+      
+<h2 id="lancer-les-tests">Lancer les tests<a class="headerlink" href="#lancer-les-tests" title="Lien vers cette section">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>back-istc
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate
+python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-q<span class="w">                         </span><span class="c1"># toute la suite (≈ 2 min)</span>
+python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>tests/<span class="w"> </span>-q<span class="w">                  </span><span class="c1"># uniquement les tests de flux</span>
+python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>tests/test_flux_notes.py<span class="w">   </span><span class="c1"># un fichier</span>
+python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-k<span class="w"> </span>rattrapage<span class="w">              </span><span class="c1"># par mot-clé</span>
+python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-x<span class="w"> </span>--lf<span class="w">                    </span><span class="c1"># s'arrêter au 1er échec / relancer les échecs</span>
+</code></pre></div>
+<p>La configuration est dans <code>back-istc/pytest.ini</code> (<code>DJANGO_SETTINGS_MODULE=smart_back.settings</code>). Les tests utilisent une base <strong>SQLite temporaire</strong> créée et détruite automatiquement : laissez <code>DATABASE_URL</code> vide (<code>DATABASE_URL= python -m pytest</code>) pour ne jamais toucher la base de production.</p>
+<p>La CI (<code>.github/workflows/ci.yml</code>) lance la suite backend et le lint frontend à chaque push et pull request.</p>
+<h2 id="organisation">Organisation<a class="headerlink" href="#organisation" title="Lien vers cette section">#</a></h2>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Emplacement</th>
+<th>Type</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>back-istc/tests/test_flux_*.py</code></td>
+<td><strong>Tests de flux</strong> (API de bout en bout)</td>
+<td>Les parcours utilisateurs critiques, écrits comme des scénarios</td>
+</tr>
+<tr>
+<td><code>&lt;app&gt;/tests.py</code></td>
+<td>Tests unitaires par app</td>
+<td>Règles fines d'un modèle ou d'une vue</td>
+</tr>
+<tr>
+<td><code>smart_back/test_audit.py</code></td>
+<td>Non-régression</td>
+<td>Bugs corrigés lors de l'audit</td>
+</tr>
+<tr>
+<td><code>conftest.py</code></td>
+<td>Fixtures communes</td>
+<td><code>monde</code>, <code>client_admin</code>, <code>client_anonyme</code> ; MEDIA temporaire et reCAPTCHA désactivé automatiquement</td>
+</tr>
+<tr>
+<td><code>smart_back/testing.py</code></td>
+<td>Fabriques</td>
+<td><code>Monde</code>, <code>creer_role</code>, <code>creer_utilisateur</code>, <code>client_api</code></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="flux-couverts">Flux couverts<a class="headerlink" href="#flux-couverts" title="Lien vers cette section">#</a></h3>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th>Parcours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>test_flux_authentification.py</code></td>
+<td>Connexion (bons / mauvais identifiants, compte inactif, formateur sans fiche), droits dans le JWT, jeton périmé, refresh, reCAPTCHA (mock de Google)</td>
+</tr>
+<tr>
+<td><code>test_flux_inscription.py</code></td>
+<td>Formulaire public, documents, fichier dangereux, doublon, approbation (étudiant + compte + inscription + paiements), bourse à usage unique, réduction 10 %, rejet, inscription directe</td>
+</tr>
+<tr>
+<td><code>test_flux_notes.py</code></td>
+<td>Saisie, batch-save, bornes CC/SN, lecture seule, visibilité après validation, relevé, rattrapages, changement de pourcentages, saisie par le formateur</td>
+</tr>
+<tr>
+<td><code>test_flux_paiements.py</code></td>
+<td>Frais, paiements successifs et solde, suivi agrégé = portail (avec réduction), échéancier 4 tranches et imputation, alertes de retard, cloisonnement</td>
+</tr>
+<tr>
+<td><code>test_flux_paie_rh.py</code></td>
+<td>Campagne complète (prime, CNPS, avance → net, valider, payer, dépense, avance remboursée, campagne payée non supprimable), vacataires, campagne unique / mois, prime ponctuelle, congés (solde, éligibilité, week-end)</td>
+</tr>
+<tr>
+<td><code>test_flux_droits_personnel.py</code></td>
+<td>Matrice des droits du personnel : domaine refusé sans droit, lecture seule, écriture, lectures croisées, paramètres réservés, rôle inexistant, interrupteur d'urgence, migration des rôles, commande <code>audit_droits</code></td>
+</tr>
+<tr>
+<td><code>test_flux_portails.py</code></td>
+<td>Chaque route des portails accessible ; toutes les routes d'administration refusées aux comptes portail ; personnel autorisé</td>
+</tr>
+<tr>
+<td><code>test_flux_emploi_du_temps_logistique.py</code></td>
+<td>Créneaux (pause, journée, conflits, années), visibilité dans les portails, demandes (cycle complet, refus, stock insuffisant), références uniques, attribution / retour d'exemplaire</td>
+</tr>
+<tr>
+<td><code>vacations/tests.py</code></td>
+<td>Arrondi ¼ h, pointage, clôture, validation, rejet, intégration paie</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="ecrire-un-test-de-flux">Écrire un test de flux<a class="headerlink" href="#ecrire-un-test-de-flux" title="Lien vers cette section">#</a></h2>
+<p>La fixture <code>monde</code> fournit un établissement prêt à l'emploi : année active <code>2026-2027</code>, filière, cycle, niveau, <strong>classe</strong> (créée par signal), module (coefficient 2), salle et un compte admin.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">smart_back.testing</span><span class="w"> </span><span class="kn">import</span> <span class="n">client_api</span><span class="p">,</span> <span class="n">creer_role</span><span class="p">,</span> <span class="n">creer_utilisateur</span>
+
+<span class="n">pytestmark</span> <span class="o">=</span> <span class="n">pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">django_db</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_un_secretaire_peut_lire_mais_pas_modifier_les_notes</span><span class="p">(</span><span class="n">monde</span><span class="p">):</span>
+    <span class="n">creer_role</span><span class="p">(</span><span class="s2">"secretaire"</span><span class="p">,</span> <span class="n">pedagogie</span><span class="o">=</span><span class="s2">"lecture"</span><span class="p">)</span>
+    <span class="n">secretaire</span> <span class="o">=</span> <span class="n">creer_utilisateur</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s2">"secretaire"</span><span class="p">)</span>
+    <span class="n">etudiant</span> <span class="o">=</span> <span class="n">monde</span><span class="o">.</span><span class="n">nouvel_etudiant</span><span class="p">()</span>                 <span class="c1"># inscrit dans monde.classe</span>
+
+    <span class="n">client</span> <span class="o">=</span> <span class="n">client_api</span><span class="p">(</span><span class="n">secretaire</span><span class="p">)</span>                    <span class="c1"># client authentifié par JWT réel</span>
+    <span class="k">assert</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"/api/notes/"</span><span class="p">)</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">"/api/notes/"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"etudiant"</span><span class="p">:</span> <span class="n">etudiant</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">"module"</span><span class="p">:</span> <span class="n">monde</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                                      <span class="s2">"note_cc"</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span> <span class="nb">format</span><span class="o">=</span><span class="s2">"json"</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">res</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">403</span>
+</code></pre></div>
+<p>Fabriques disponibles sur <code>monde</code> :</p>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Méthode</th>
+<th>Crée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>monde.nouvel_etudiant(inscrire=True, **champs)</code></td>
+<td>Étudiant (+ compte portail, + inscription dans <code>monde.classe</code>)</td>
+</tr>
+<tr>
+<td><code>monde.nouveau_formateur(vacataire=False, avec_compte=True, **champs)</code></td>
+<td>Formateur (permanent ou vacataire, avec compte <code>formateur</code>)</td>
+</tr>
+<tr>
+<td><code>monde.nouveau_personnel(**champs)</code></td>
+<td>Membre du personnel</td>
+</tr>
+<tr>
+<td><code>monde.nouvelle_seance(formateur, jour="Lundi", debut=time(8), fin=time(10))</code></td>
+<td>Créneau d'emploi du temps</td>
+</tr>
+<tr>
+<td><code>monde.client_pour(user)</code> / <code>monde.client_admin()</code></td>
+<td>Client API authentifié</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fonctions : <code>creer_role(code, etudiants=…, pedagogie=…, finance=…, logistique=…, rh=…)</code>, <code>creer_utilisateur(role="admin", **champs)</code>, <code>client_api(user=None, annee=None)</code> (<code>annee</code> ajoute l'en-tête <code>X-Academic-Year</code>).</p>
+<h2 id="bonnes-pratiques">Bonnes pratiques<a class="headerlink" href="#bonnes-pratiques" title="Lien vers cette section">#</a></h2>
+<ul>
+<li><strong>Un test = un comportement</strong>, nommé en français (<code>test_une_bourse_ne_sert_qu_une_fois</code>).</li>
+<li>Testez via <strong>l'API</strong> (comme le frontend), pas en appelant les fonctions internes, sauf pour une règle de calcul pure.</li>
+<li>Vérifiez les <strong>effets</strong> (base de données, statuts, soldes), pas seulement le code HTTP.</li>
+<li>Tout bug corrigé reçoit un test qui échouait avant la correction.</li>
+<li>Toute nouvelle route de portail est ajoutée à <code>ROUTES_ETUDIANT</code> / <code>ROUTES_FORMATEUR</code> ; toute nouvelle route d'administration à <code>ROUTES_ADMINISTRATION</code>.</li>
+<li>Pas d'appel réseau réel : moquez (<code>unittest.mock.patch</code>), comme pour reCAPTCHA.</li>
+</ul>
+<h2 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Lien vers cette section">#</a></h2>
+<p>Il n'y a pas encore de tests automatisés côté frontend. Le filet de sécurité actuel est :</p>
+<ol>
+<li><code>npm run lint</code> (ESLint <code>eslint-config-next</code>), exécuté par la CI ;</li>
+<li><code>npm run build</code>, qui détecte les erreurs d'import et de syntaxe ;</li>
+<li>les tests de flux backend, qui garantissent que chaque route appelée par les portails répond.</li>
+</ol>
+<p>Piste d'évolution : ajouter Playwright (déjà compatible avec Next.js) pour 3 ou 4 parcours écran (connexion, saisie de notes, paiement).</p>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../developpeurs/permissions.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Permissions et cloisonnement</strong></a><a class="suiv" href="../developpeurs/ajouter-une-fonctionnalite.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Ajouter une fonctionnalité</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#lancer-les-tests">Lancer les tests</a></li><li><a href="#organisation">Organisation</a><ul><li><a href="#flux-couverts">Flux couverts</a></li></ul></li><li><a href="#ecrire-un-test-de-flux">Écrire un test de flux</a></li><li><a href="#bonnes-pratiques">Bonnes pratiques</a></li><li><a href="#frontend">Frontend</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../assets/donnees.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

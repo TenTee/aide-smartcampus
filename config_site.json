@@ -1,0 +1,83 @@
+{
+  "titre": "Centre d'aide SmartCampus",
+  "sous_titre": "Tout pour utiliser, installer et faire évoluer la plateforme SmartCampus",
+  "nom_court": "SmartCampus · Aide",
+  "fichier_word": "SmartCampus_Documentation_complete.docx",
+  "recherches_suggerees": ["saisir des notes", "enregistrer un paiement", "mot de passe oublié", "campagne de paie", "emploi du temps", "accès refusé"],
+  "profils": [
+    {
+      "id": "candidat", "icone": "inscription", "titre": "Candidat",
+      "resume": "Je veux m'inscrire en ligne.",
+      "pages": ["guide/preinscription-candidat.md", "guide/faq.md"]
+    },
+    {
+      "id": "etudiant", "icone": "etudiant", "titre": "Étudiant",
+      "resume": "Je consulte mes notes, ma scolarité et mon emploi du temps.",
+      "pages": ["guide/premiers-pas.md", "guide/portail-etudiant.md", "guide/faq.md"]
+    },
+    {
+      "id": "formateur", "icone": "formateur", "titre": "Formateur",
+      "resume": "Je saisis mes notes, publie mes cours et suis mes heures.",
+      "pages": ["guide/premiers-pas.md", "guide/portail-formateur.md", "guide/faq.md"]
+    },
+    {
+      "id": "coordonnateur", "icone": "pointage", "titre": "Coordonnateur de filière",
+      "resume": "Je pointe les heures des enseignants de ma filière.",
+      "pages": ["guide/premiers-pas.md", "guide/portail-formateur.md", "guide/coordonnateur.md", "guide/administration/heures-vacataires.md"]
+    },
+    {
+      "id": "secretariat", "icone": "dossier", "titre": "Secrétariat · Scolarité",
+      "resume": "J'inscris les étudiants, suis les dossiers et les paiements.",
+      "pages": ["guide/premiers-pas.md", "guide/roles-et-acces.md", "guide/administration/preinscriptions.md", "guide/administration/etudiants.md", "guide/administration/scolarite.md", "guide/administration/assiduite.md", "guide/faq.md"]
+    },
+    {
+      "id": "pedagogie", "icone": "livre", "titre": "Responsable pédagogique",
+      "resume": "J'organise les classes, les cours, l'emploi du temps et les notes.",
+      "pages": ["guide/premiers-pas.md", "guide/administration/structure-academique.md", "guide/administration/cours.md", "guide/administration/emploi-du-temps.md", "guide/administration/notes.md", "guide/administration/banque-epreuves.md", "guide/administration/coordonnateurs.md"]
+    },
+    {
+      "id": "comptabilite", "icone": "finance", "titre": "Comptabilité",
+      "resume": "Je gère les paiements, les dépenses, la paie et les vacations.",
+      "pages": ["guide/premiers-pas.md", "guide/administration/scolarite.md", "guide/administration/apercu-financier.md", "guide/administration/salaires.md", "guide/administration/heures-vacataires.md"]
+    },
+    {
+      "id": "rh", "icone": "equipe", "titre": "Ressources humaines",
+      "resume": "Je gère le personnel, les formateurs et les congés.",
+      "pages": ["guide/premiers-pas.md", "guide/administration/personnel-conges.md", "guide/administration/enseignants.md", "guide/administration/salaires.md"]
+    },
+    {
+      "id": "logistique", "icone": "carton", "titre": "Logistique",
+      "resume": "Je gère le stock, le matériel et les demandes.",
+      "pages": ["guide/premiers-pas.md", "guide/administration/inventaire.md"]
+    },
+    {
+      "id": "direction", "icone": "bouclier", "titre": "Direction · Administrateur",
+      "resume": "Je paramètre la plateforme, les comptes et les droits.",
+      "pages": ["guide/premiers-pas.md", "guide/roles-et-acces.md", "guide/demarrer-une-annee.md", "guide/administration/tableau-de-bord.md", "guide/administration/systeme.md", "guide/administration/apercu-financier.md"]
+    },
+    {
+      "id": "informatique", "icone": "serveur", "titre": "Responsable informatique",
+      "resume": "J'installe, sauvegarde et mets à jour le serveur.",
+      "pages": ["installation/index.md", "installation/prerequis.md", "installation/deploiement-serveur.md", "installation/configuration.md", "installation/sauvegardes.md", "installation/mise-a-jour.md", "installation/depannage.md"]
+    },
+    {
+      "id": "developpeur", "icone": "code", "titre": "Développeur",
+      "resume": "Je fais évoluer le code de la plateforme.",
+      "pages": ["developpeurs/index.md", "developpeurs/architecture.md", "developpeurs/applications.md", "developpeurs/permissions.md", "developpeurs/tests.md", "developpeurs/ajouter-une-fonctionnalite.md", "developpeurs/conventions.md"]
+    }
+  ],
+  "taches": [
+    ["Se connecter pour la première fois", "guide/premiers-pas.md", "Se connecter"],
+    ["Approuver une préinscription", "guide/administration/preinscriptions.md", "Approuver une préinscription"],
+    ["Inscrire directement un étudiant", "guide/administration/etudiants.md", "Ajouter un étudiant"],
+    ["Enregistrer un paiement de scolarité", "guide/administration/scolarite.md", "Enregistrer un paiement"],
+    ["Configurer les frais d'une classe", "guide/administration/scolarite.md", "Configurer les frais"],
+    ["Saisir et valider des notes", "guide/administration/notes.md", "Saisie par Cours"],
+    ["Ajouter un créneau à l'emploi du temps", "guide/administration/emploi-du-temps.md", "Ajouter un créneau"],
+    ["Pointer une séance (coordonnateur)", "guide/coordonnateur.md", "Pointer une séance"],
+    ["Valider les heures des vacataires", "guide/administration/heures-vacataires.md", "Valider les heures du mois"],
+    ["Générer la campagne de paie du mois", "guide/administration/salaires.md", "Générer la campagne"],
+    ["Créer un rôle et ses droits", "guide/administration/systeme.md", "créer un rôle"],
+    ["Démarrer une nouvelle année", "guide/demarrer-une-annee.md", "Liste de contrôle"]
+  ]
+}

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr" data-racine="../" data-page="developpeurs/permissions.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Permissions et cloisonnement · SmartCampus · Aide</title>
+<meta name="description" content="La sécurité repose sur trois niveaux , tous côté serveur. Le masquage des menus dans le frontend n&#x27;est qu&#x27;un confort : ne jamais compter dessus .">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+    <p class="nav-titre">Développeurs</p><ul class="nav-arbre"><li><a href="../developpeurs/index.html" data-page="developpeurs/index.html">Présentation</a></li><li><a href="../developpeurs/architecture.html" data-page="developpeurs/architecture.html">Architecture</a></li><li><a href="../developpeurs/applications.html" data-page="developpeurs/applications.html">Carte des applications</a></li><li><a href="../developpeurs/permissions.html" data-page="developpeurs/permissions.html" aria-current="page">Permissions et cloisonnement</a></li><li><a href="../developpeurs/tests.html" data-page="developpeurs/tests.html">Tests automatisés</a></li><li><a href="../developpeurs/ajouter-une-fonctionnalite.html" data-page="developpeurs/ajouter-une-fonctionnalite.html">Ajouter une fonctionnalité</a></li><li><a href="../developpeurs/conventions.html" data-page="developpeurs/conventions.html">Conventions de code</a></li><li><a href="../developpeurs/api.html" data-page="developpeurs/api.html">Référence API</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> <a href="../developpeurs/index.html">Développeurs</a></nav>
+      <h1>Permissions et cloisonnement</h1>
+      <div id="bandeau-parcours"></div>
+      
+<p>La sécurité repose sur <strong>trois niveaux</strong>, tous côté serveur. Le masquage des menus dans le frontend n'est qu'un confort : <strong>ne jamais compter dessus</strong>.</p>
+<h2 id="1-comptes-portail-liste-blanche-portal_rules">1. Comptes portail : liste blanche <code>PORTAL_RULES</code><a class="headerlink" href="#1-comptes-portail-liste-blanche-portal_rules" title="Lien vers cette section">#</a></h2>
+<p>Fichier : <code>back-istc/users/middleware.py</code>.</p>
+<ul>
+<li>Un utilisateur dont <code>role == "etudiant"</code> ou <code>role == "formateur"</code> (et non admin) ne peut appeler <strong>que</strong> les couples <em>(méthodes, regex d'URL)</em> listés dans <code>PORTAL_RULES[role]</code>. Tout le reste → <strong>403</strong>.</li>
+<li><code>_REFERENTIEL</code> regroupe les routes de référence en lecture seule communes aux deux portails.</li>
+<li>Le middleware lit le JWT lui-même (<code>jwt_user</code>), car <code>request.user</code> n'est pas encore authentifié par DRF à ce stade.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Ajouter une route utilisée par un portail</p>
+<ol>
+<li>Ajoutez la règle dans <code>PORTAL_RULES</code> (méthodes minimales : <code>SAFE</code> si lecture seule).</li>
+<li>Dans la <strong>vue</strong>, filtrez les données sur l'utilisateur connecté (le middleware autorise la route, pas les données !).</li>
+<li>Ajoutez l'URL à <code>ROUTES_ETUDIANT</code> / <code>ROUTES_FORMATEUR</code> dans <code>tests/test_flux_portails.py</code>.</li>
+</ol>
+<p>Sans l'étape 1, la page du portail reçoit un 403 ; sans l'étape 2, un étudiant pourrait lire les données d'un autre.</p>
+</div>
+<h2 id="2-personnel-matrice-des-droits-regles">2. Personnel : matrice des droits <code>REGLES</code><a class="headerlink" href="#2-personnel-matrice-des-droits-regles" title="Lien vers cette section">#</a></h2>
+<p>Fichier : <code>back-istc/users/acces_personnel.py</code> (middleware <code>StaffAccessMiddleware</code>, placé juste après <code>PortalAccessMiddleware</code>).</p>
+<p>Pour un compte du personnel (ni administrateur, ni étudiant, ni formateur), chaque requête <code>/api/…</code> est comparée à la liste <code>REGLES</code> ; <strong>la première règle qui correspond s'applique</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># (motif d'URL, domaines autorisés en lecture, domaines autorisés en écriture)</span>
+<span class="p">(</span><span class="sa">r</span><span class="s2">"^/api/etudiants(/|$)"</span><span class="p">,</span> <span class="p">(</span><span class="n">ET</span><span class="p">,</span> <span class="n">PEDA</span><span class="p">,</span> <span class="n">FIN</span><span class="p">),</span> <span class="p">(</span><span class="n">ET</span><span class="p">,)),</span>
+<span class="p">(</span><span class="sa">r</span><span class="s2">"^/api/paie(/|$)"</span><span class="p">,</span>      <span class="p">(</span><span class="n">FIN</span><span class="p">,</span> <span class="n">RH</span><span class="p">),</span>       <span class="p">(</span><span class="n">FIN</span><span class="p">,)),</span>
+<span class="p">(</span><span class="sa">r</span><span class="s2">"^/api/v2/(parametres-globaux|cycles-globaux|configuration-etablissement)(/|$)"</span><span class="p">,</span> <span class="n">TOUS</span><span class="p">,</span> <span class="n">ADMIN</span><span class="p">),</span>
+</code></pre></div>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Méthode</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET, HEAD, OPTIONS</td>
+<td>niveau <code>lecture</code> ou <code>ecriture</code> sur <strong>un</strong> des domaines de lecture</td>
+</tr>
+<tr>
+<td>POST, PUT, PATCH, DELETE</td>
+<td>niveau <code>ecriture</code> sur <strong>un</strong> des domaines d'écriture</td>
+</tr>
+<tr>
+<td><code>TOUS</code></td>
+<td>tout compte du personnel</td>
+</tr>
+<tr>
+<td><code>ADMIN</code></td>
+<td>administrateurs uniquement</td>
+</tr>
+<tr>
+<td>Route sans règle</td>
+<td><strong>administrateurs uniquement</strong> (refus par défaut)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Le refus renvoie <strong>403</strong> avec un message explicite (« Accès refusé : votre rôle n'a pas le droit Finances en écriture. »).</p>
+<div class="admonition danger">
+<p class="admonition-title">Ajouter une route d'API</p>
+<p>Ajoutez sa règle dans <code>REGLES</code> (sinon elle est réservée aux administrateurs) et un cas dans <code>tests/test_flux_droits_personnel.py</code>.</p>
+</div>
+<p>Les contrôles plus fins restent dans les vues (<code>users/permissions.py</code>) :</p>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Fonction / classe</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is_admin_user(user)</code></td>
+<td><code>is_superuser</code> ou <code>role in ADMIN_ROLE_CODES</code> (<code>admin</code>, <code>superadmin</code>)</td>
+</tr>
+<tr>
+<td><code>get_role_access_level(user, "can_manage_finance")</code></td>
+<td><code>none</code> / <code>lecture</code> / <code>ecriture</code></td>
+</tr>
+<tr>
+<td><code>user_has_read_access</code> / <code>user_has_write_access</code></td>
+<td>contrôles dans les vues (validation des notes, etc.)</td>
+</tr>
+<tr>
+<td><code>UserAccountPermission</code></td>
+<td><code>/api/auth/</code> : admin uniquement (sauf sa propre fiche)</td>
+</tr>
+<tr>
+<td><code>RolePermission</code></td>
+<td>rôles : lecture pour tous, écriture admin</td>
+</tr>
+</tbody>
+</table></div>
+<p>Un compte dont le code de rôle ne correspond à <strong>aucun</strong> <code>Role</code> n'a aucun droit (référentiels seulement). La migration <code>users/0003_roles_pour_codes_existants</code> crée les rôles manquants lors de la mise à jour, et <code>python manage.py audit_droits</code> affiche les droits effectifs de chaque compte.</p>
+<p>Interrupteur d'urgence : <code>CONTROLE_DROITS_PERSONNEL=False</code> dans <code>.env</code> désactive la matrice (à n'utiliser que le temps de corriger un rôle).</p>
+<h2 id="3-annees-archivees">3. Années archivées<a class="headerlink" href="#3-annees-archivees" title="Lien vers cette section">#</a></h2>
+<p><code>academique.middleware.ArchiveAcademicYearMiddleware</code> : si l'en-tête <code>X-Academic-Year</code> désigne une année non active, seuls les superusers passent. Exemptés : <code>/api/auth/</code>, <code>/api/v2/annees-academiques/</code>, <code>/api/v2/configuration-etablissement/</code>, <code>/admin/</code>.</p>
+<h2 id="matrice-de-controle-testee">Matrice de contrôle (testée)<a class="headerlink" href="#matrice-de-controle-testee" title="Lien vers cette section">#</a></h2>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Qui</th>
+<th>Admin (<code>/api/etudiants/</code>, <code>/api/paie/…</code>, …)</th>
+<th>Portail étudiant</th>
+<th>Portail formateur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Étudiant</td>
+<td>403</td>
+<td>200 (ses données)</td>
+<td>403</td>
+</tr>
+<tr>
+<td>Formateur</td>
+<td>403</td>
+<td>403</td>
+<td>200 (ses données)</td>
+</tr>
+<tr>
+<td>Personnel sans droit sur le domaine</td>
+<td>403</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Personnel avec droit Lecture</td>
+<td>200 en lecture, 403 en écriture</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td>200</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tout est vérifié par <code>tests/test_flux_portails.py</code>, <code>tests/test_flux_droits_personnel.py</code> et <code>tests/test_flux_authentification.py</code>.</p>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../developpeurs/applications.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Carte des applications</strong></a><a class="suiv" href="../developpeurs/tests.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Tests automatisés</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#1-comptes-portail-liste-blanche-portal_rules">1. Comptes portail : liste blanche PORTAL_RULES</a></li><li><a href="#2-personnel-matrice-des-droits-regles">2. Personnel : matrice des droits REGLES</a></li><li><a href="#3-annees-archivees">3. Années archivées</a></li><li><a href="#matrice-de-controle-testee">Matrice de contrôle (testée)</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../assets/donnees.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

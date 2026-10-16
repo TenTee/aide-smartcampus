@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr" data-racine="../" data-page="developpeurs/index.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentation développeurs · SmartCampus · Aide</title>
+<meta name="description" content="Cette partie s&#x27;adresse à l&#x27;équipe qui maintient et fait évoluer SmartCampus. Page Contenu Architecture Vue d&#x27;ensemble backend / frontend, flux d&#x27;une requête, an">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+    <p class="nav-titre">Développeurs</p><ul class="nav-arbre"><li><a href="../developpeurs/index.html" data-page="developpeurs/index.html" aria-current="page">Présentation</a></li><li><a href="../developpeurs/architecture.html" data-page="developpeurs/architecture.html">Architecture</a></li><li><a href="../developpeurs/applications.html" data-page="developpeurs/applications.html">Carte des applications</a></li><li><a href="../developpeurs/permissions.html" data-page="developpeurs/permissions.html">Permissions et cloisonnement</a></li><li><a href="../developpeurs/tests.html" data-page="developpeurs/tests.html">Tests automatisés</a></li><li><a href="../developpeurs/ajouter-une-fonctionnalite.html" data-page="developpeurs/ajouter-une-fonctionnalite.html">Ajouter une fonctionnalité</a></li><li><a href="../developpeurs/conventions.html" data-page="developpeurs/conventions.html">Conventions de code</a></li><li><a href="../developpeurs/api.html" data-page="developpeurs/api.html">Référence API</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> <span>Développeurs</span></nav>
+      <h1>Documentation développeurs</h1>
+      <div id="bandeau-parcours"></div>
+      
+<p>Cette partie s'adresse à l'équipe qui maintient et fait évoluer SmartCampus.</p>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Page</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="architecture.html">Architecture</a></td>
+<td>Vue d'ensemble backend / frontend, flux d'une requête, année académique</td>
+</tr>
+<tr>
+<td><a href="applications.html">Carte des applications</a></td>
+<td>À quoi sert chaque app Django et chaque dossier du frontend</td>
+</tr>
+<tr>
+<td><a href="permissions.html">Permissions et cloisonnement</a></td>
+<td>Rôles, <code>PORTAL_RULES</code>, années archivées — <strong>à lire avant d'ajouter une route</strong></td>
+</tr>
+<tr>
+<td><a href="tests.html">Tests automatisés</a></td>
+<td>Lancer les tests, fabriques <code>Monde</code>, écrire un test de flux</td>
+</tr>
+<tr>
+<td><a href="ajouter-une-fonctionnalite.html">Ajouter une fonctionnalité</a></td>
+<td>Recette pas à pas (modèle → API → droits → écran → tests → doc)</td>
+</tr>
+<tr>
+<td><a href="conventions.html">Conventions de code</a></td>
+<td>Style, nommage, Git, revue</td>
+</tr>
+<tr>
+<td><a href="api.html">Référence API</a></td>
+<td>Swagger, authentification, en-têtes, principaux endpoints</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="demarrage-rapide">Démarrage rapide<a class="headerlink" href="#demarrage-rapide" title="Lien vers cette section">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Backend</span>
+<span class="nb">cd</span><span class="w"> </span>back-istc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+cp<span class="w"> </span>.env.example<span class="w"> </span>.env<span class="w">            </span><span class="c1"># DEBUG=True, DATABASE_URL vide (SQLite)</span>
+python<span class="w"> </span>manage.py<span class="w"> </span>migrate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>createsuperuser
+python<span class="w"> </span>manage.py<span class="w"> </span>runserver<span class="w">      </span><span class="c1"># http://127.0.0.1:8000/api/docs/</span>
+
+<span class="c1"># Frontend</span>
+<span class="nb">cd</span><span class="w"> </span>frontend<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>cp<span class="w"> </span>.env.example<span class="w"> </span>.env.local<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dev<span class="w">   </span><span class="c1"># http://localhost:3000</span>
+
+<span class="c1"># Tests et lint (à lancer avant chaque push)</span>
+<span class="nb">cd</span><span class="w"> </span>back-istc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-q
+<span class="nb">cd</span><span class="w"> </span>frontend<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>lint
+
+<span class="c1"># Documentation</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-docs.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mkdocs<span class="w"> </span>serve<span class="w">   </span><span class="c1"># http://127.0.0.1:8000</span>
+</code></pre></div>
+<p>Voir aussi <code>CONTRIBUTING.md</code> à la racine du dépôt.</p>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../installation/depannage.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Dépannage</strong></a><a class="suiv" href="../developpeurs/architecture.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Architecture</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#demarrage-rapide">Démarrage rapide</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../assets/donnees.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

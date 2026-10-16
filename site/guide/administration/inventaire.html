@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr" data-racine="../../" data-page="guide/administration/inventaire.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inventaire et demandes de matériel · SmartCampus · Aide</title>
+<meta name="description" content="Menu : Inventaire — Accès : domaine Logistique / Inventaire . L&#x27;inventaire suit le matériel de l&#x27;établissement article par article (ex. « Vidéoprojecteur ») et ">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../../guide/index.html" class="onglet" aria-current="true">Guide d&#x27;utilisation</a><a href="../../installation/index.html" class="onglet">Installation</a><a href="../../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../../guide/index.html" class="onglet" aria-current="true">Guide d&#x27;utilisation</a><a href="../../installation/index.html" class="onglet">Installation</a><a href="../../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+    <p class="nav-titre">Guide d&#x27;utilisation</p><ul class="nav-arbre"><li><a href="../../guide/index.html" data-page="guide/index.html">Présentation</a></li><li><a href="../../guide/premiers-pas.html" data-page="guide/premiers-pas.html">Premiers pas</a></li><li><a href="../../guide/roles-et-acces.html" data-page="guide/roles-et-acces.html">Rôles et droits d&#x27;accès</a></li><li><a href="../../guide/demarrer-une-annee.html" data-page="guide/demarrer-une-annee.html">Démarrer une nouvelle année</a></li><li><a href="../../guide/preinscription-candidat.html" data-page="guide/preinscription-candidat.html">Candidats — préinscription en ligne</a></li><li class="groupe"><details open><summary><a href="../../guide/administration/index.html" data-page="guide/administration/index.html">Administration</a></summary><ul><li><a href="../../guide/administration/tableau-de-bord.html" data-page="guide/administration/tableau-de-bord.html">Tableau de bord</a></li><li><a href="../../guide/administration/structure-academique.html" data-page="guide/administration/structure-academique.html">Structure académique</a></li><li><a href="../../guide/administration/cours.html" data-page="guide/administration/cours.html">Cours et modules</a></li><li><a href="../../guide/administration/etudiants.html" data-page="guide/administration/etudiants.html">Étudiants</a></li><li><a href="../../guide/administration/enseignants.html" data-page="guide/administration/enseignants.html">Enseignants (formateurs)</a></li><li><a href="../../guide/administration/emploi-du-temps.html" data-page="guide/administration/emploi-du-temps.html">Emploi du temps</a></li><li><a href="../../guide/administration/notes.html" data-page="guide/administration/notes.html">Notes et relevés</a></li><li><a href="../../guide/administration/banque-epreuves.html" data-page="guide/administration/banque-epreuves.html">Banque d&#x27;épreuves</a></li><li><a href="../../guide/administration/assiduite.html" data-page="guide/administration/assiduite.html">Assiduité</a></li><li><a href="../../guide/administration/coordonnateurs.html" data-page="guide/administration/coordonnateurs.html">Coordonnateurs de filière</a></li><li><a href="../../guide/administration/preinscriptions.html" data-page="guide/administration/preinscriptions.html">Préinscriptions (validation)</a></li><li><a href="../../guide/administration/scolarite.html" data-page="guide/administration/scolarite.html">Scolarité et paiements</a></li><li><a href="../../guide/administration/apercu-financier.html" data-page="guide/administration/apercu-financier.html">Aperçu financier (revenus et dépenses)</a></li><li><a href="../../guide/administration/salaires.html" data-page="guide/administration/salaires.html">Salaires (personnel et formateurs)</a></li><li><a href="../../guide/administration/heures-vacataires.html" data-page="guide/administration/heures-vacataires.html">Heures des vacataires</a></li><li><a href="../../guide/administration/inventaire.html" data-page="guide/administration/inventaire.html" aria-current="page">Inventaire et demandes</a></li><li><a href="../../guide/administration/personnel-conges.html" data-page="guide/administration/personnel-conges.html">Personnel et congés</a></li><li><a href="../../guide/administration/systeme.html" data-page="guide/administration/systeme.html">Système (paramètres, utilisateurs, rôles)</a></li></ul></details></li><li><a href="../../guide/portail-formateur.html" data-page="guide/portail-formateur.html">Portail formateur</a></li><li><a href="../../guide/coordonnateur.html" data-page="guide/coordonnateur.html">Coordonnateur de filière</a></li><li><a href="../../guide/portail-etudiant.html" data-page="guide/portail-etudiant.html">Portail étudiant</a></li><li><a href="../../guide/faq.html" data-page="guide/faq.html">Questions fréquentes</a></li><li><a href="../../guide/glossaire.html" data-page="guide/glossaire.html">Glossaire</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../../index.html">Accueil</a> <span aria-hidden="true">›</span> <a href="../../guide/index.html">Guide d&#x27;utilisation</a> <span aria-hidden="true">›</span> <a href="../../guide/administration/index.html">Administration</a></nav>
+      <h1>Inventaire et demandes de matériel</h1>
+      <div id="bandeau-parcours"></div>
+      
+<p><strong>Menu :</strong> Inventaire — <strong>Accès :</strong> domaine <em>Logistique / Inventaire</em>.</p>
+<p>L'inventaire suit le matériel de l'établissement <strong>article par article</strong> (ex. « Vidéoprojecteur ») et <strong>exemplaire par exemplaire</strong> (chaque vidéoprojecteur physique, avec sa référence et son numéro de série). Quatre onglets : <em>Articles &amp; Stock</em>, <em>Demandes</em>, <em>Mouvements</em>, <em>Statistiques</em>.</p>
+<h2 id="onglet-articles-stock">Onglet <em>Articles &amp; Stock</em><a class="headerlink" href="#onglet-articles-stock" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : L'onglet Articles &amp; Stock"><img src="../../images/captures/34_inventaire_articles.jpg" alt="L'onglet Articles &amp; Stock" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>L'onglet Articles &amp; Stock</figcaption></figure>
+<h3 id="creer-un-article">Créer un article<a class="headerlink" href="#creer-un-article" title="Lien vers cette section">#</a></h3>
+<ol>
+<li><strong>Nouvel article</strong>.</li>
+<li>Remplissez « Nom de l'article », « Description », « Catégorie », « Prix unitaire (FCFA) », « Fournisseur », « Seuil d'alerte » (stock minimal en dessous duquel l'article est signalé) et « Stock initial » (nombre d'exemplaires déjà possédés).</li>
+<li>Enregistrez. Un exemplaire est créé pour chaque unité du stock initial.</li>
+</ol>
+<p>Le tableau indique pour chaque article : Référence, Catégorie, <strong>En stock</strong>, <strong>Utilisés</strong>, <strong>En panne</strong>, Total, Prix unitaire.</p>
+<h3 id="ajouter-du-stock-nouvel-achat">Ajouter du stock (nouvel achat)<a class="headerlink" href="#ajouter-du-stock-nouvel-achat" title="Lien vers cette section">#</a></h3>
+<p>Icône <strong>Ajouter au stock</strong> sur la ligne de l'article → indiquez la « Quantité », la « Condition », la « Localisation » et la « Date d'acquisition » → <strong>Ajouter</strong>. Un mouvement <em>Entrée en stock</em> est enregistré.</p>
+<h3 id="gerer-les-exemplaires">Gérer les exemplaires<a class="headerlink" href="#gerer-les-exemplaires" title="Lien vers cette section">#</a></h3>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Les exemplaires d'un article"><img src="../../images/captures/34f_inventaire_exemplaires.jpg" alt="Les exemplaires d'un article" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Les exemplaires d'un article</figcaption></figure>
+<p>En ouvrant un article, la liste de ses exemplaires apparaît (Réf., N° Série, Statut, Condition, Localisation, Attribué à). Actions possibles :</p>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Icône</th>
+<th>Effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modifier N° série / Description</td>
+<td>Compléter la fiche de l'exemplaire.</td>
+</tr>
+<tr>
+<td>Marquer en panne</td>
+<td>Statut <em>En panne</em> : il n'est plus disponible.</td>
+</tr>
+<tr>
+<td>Retourner en stock / Remettre en stock</td>
+<td>L'exemplaire attribué ou réparé redevient disponible.</td>
+</tr>
+<tr>
+<td>Réformer</td>
+<td>Sortie définitive de l'inventaire (matériel hors d'usage, vendu, perdu).</td>
+</tr>
+</tbody>
+</table></div>
+<p>Statuts possibles : <em>En stock</em>, <em>En utilisation</em>, <em>En panne</em>, <em>En maintenance</em>, <em>Réformé</em>.</p>
+<h2 id="onglet-demandes-demandes-de-materiel">Onglet <em>Demandes</em> — demandes de matériel<a class="headerlink" href="#onglet-demandes-demandes-de-materiel" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : L'onglet Demandes"><img src="../../images/captures/34b_inventaire_demandes.jpg" alt="L'onglet Demandes" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>L'onglet Demandes</figcaption></figure>
+<p>Une <strong>demande</strong> permet à un formateur ou à un membre du personnel d'obtenir du matériel. Elle suit ce circuit :</p>
+<figure class="diagramme" markdown="0"><img class="seulement-clair" src="../../assets/diagrammes/11395e5f9655-clair.svg" alt="Diagramme" loading="lazy"><img class="seulement-sombre" src="../../assets/diagrammes/11395e5f9655-sombre.svg" alt="Diagramme" loading="lazy"></figure>
+<h3 id="creer-une-demande">Créer une demande<a class="headerlink" href="#creer-une-demande" title="Lien vers cette section">#</a></h3>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : L'assistant « Nouvelle demande d'articles »"><img src="../../images/captures/34e_nouvelle_demande.jpg" alt="L'assistant « Nouvelle demande d'articles »" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>L'assistant « Nouvelle demande d'articles »</figcaption></figure>
+<ol>
+<li><strong>Nouvelle demande</strong>. L'assistant comporte plusieurs étapes (<strong>Suivant</strong> / <strong>Précédent</strong>).</li>
+<li>Renseignez l'« Objet de la demande », le « Motif / Justification », le « Demandeur » et la « Priorité » (Basse, Normale, Haute, Urgente).</li>
+<li>Ajoutez les articles : choisissez l'« Article », la « Qté », éventuellement des « Notes ». Répétez pour chaque article.</li>
+<li>Vérifiez le récapitulatif (« Vérifiez les informations avant de soumettre la demande. ») puis validez.</li>
+</ol>
+<p>Chaque demande reçoit une référence unique (<code>DEM-…</code>).</p>
+<h3 id="traiter-une-demande">Traiter une demande<a class="headerlink" href="#traiter-une-demande" title="Lien vers cette section">#</a></h3>
+<p>Sur la ligne de la demande :</p>
+<ol>
+<li><strong>Soumettre</strong> (si elle est en brouillon).</li>
+<li><strong>Approuver</strong> ou <strong>Refuser</strong> (saisir le « Motif du refus »).</li>
+<li><strong>Livrer</strong> : les exemplaires disponibles sont attribués au demandeur (statut <em>En utilisation</em>) et un mouvement <em>Sortie / Attribution</em> est enregistré.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Si le stock disponible est insuffisant pour <strong>une seule</strong> ligne, la livraison entière est refusée (« Stock insuffisant, aucune sortie effectuée. ») avec le détail par article (ex. « Chaise : seulement 2/4 disponibles »). Ajoutez du stock puis cliquez de nouveau sur <strong>Livrer</strong>.</p>
+</div>
+<h2 id="onglet-mouvements">Onglet <em>Mouvements</em><a class="headerlink" href="#onglet-mouvements" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Le journal des mouvements"><img src="../../images/captures/34c_inventaire_mouvements.jpg" alt="Le journal des mouvements" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Le journal des mouvements</figcaption></figure>
+<p>Le journal de toutes les opérations : Date, Exemplaire, Type (<em>Entrée en stock</em>, <em>Sortie / Attribution</em>, <em>Retour en stock</em>, <em>Transfert</em>, <em>Envoi en maintenance</em>, <em>Réforme</em>), Motif, Destinataire. Il sert de traçabilité en cas de contrôle ou de perte.</p>
+<h2 id="onglet-statistiques">Onglet <em>Statistiques</em><a class="headerlink" href="#onglet-statistiques" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Les statistiques de l'inventaire"><img src="../../images/captures/34d_inventaire_statistiques.jpg" alt="Les statistiques de l'inventaire" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Les statistiques de l'inventaire</figcaption></figure>
+<p>Par article : nombre d'exemplaires, en utilisation, taux d'utilisation, stock disponible. Utile pour planifier les achats.</p>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../../guide/administration/heures-vacataires.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Heures des enseignants vacataires</strong></a><a class="suiv" href="../../guide/administration/personnel-conges.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Personnel et congés</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#onglet-articles-stock">Onglet Articles &amp; Stock</a><ul><li><a href="#creer-un-article">Créer un article</a></li><li><a href="#ajouter-du-stock-nouvel-achat">Ajouter du stock (nouvel achat)</a></li><li><a href="#gerer-les-exemplaires">Gérer les exemplaires</a></li></ul></li><li><a href="#onglet-demandes-demandes-de-materiel">Onglet Demandes — demandes de matériel</a><ul><li><a href="#creer-une-demande">Créer une demande</a></li><li><a href="#traiter-une-demande">Traiter une demande</a></li></ul></li><li><a href="#onglet-mouvements">Onglet Mouvements</a></li><li><a href="#onglet-statistiques">Onglet Statistiques</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../../assets/donnees.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

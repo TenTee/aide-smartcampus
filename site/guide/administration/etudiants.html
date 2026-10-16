@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr" data-racine="../../" data-page="guide/administration/etudiants.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Étudiants · SmartCampus · Aide</title>
+<meta name="description" content="Menu : Étudiants — Accès : domaine Étudiants (Écriture pour ajouter, modifier ou supprimer). La page « Liste des étudiants » regroupe tous les dossiers étudiant">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../../guide/index.html" class="onglet" aria-current="true">Guide d&#x27;utilisation</a><a href="../../installation/index.html" class="onglet">Installation</a><a href="../../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../../guide/index.html" class="onglet" aria-current="true">Guide d&#x27;utilisation</a><a href="../../installation/index.html" class="onglet">Installation</a><a href="../../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+    <p class="nav-titre">Guide d&#x27;utilisation</p><ul class="nav-arbre"><li><a href="../../guide/index.html" data-page="guide/index.html">Présentation</a></li><li><a href="../../guide/premiers-pas.html" data-page="guide/premiers-pas.html">Premiers pas</a></li><li><a href="../../guide/roles-et-acces.html" data-page="guide/roles-et-acces.html">Rôles et droits d&#x27;accès</a></li><li><a href="../../guide/demarrer-une-annee.html" data-page="guide/demarrer-une-annee.html">Démarrer une nouvelle année</a></li><li><a href="../../guide/preinscription-candidat.html" data-page="guide/preinscription-candidat.html">Candidats — préinscription en ligne</a></li><li class="groupe"><details open><summary><a href="../../guide/administration/index.html" data-page="guide/administration/index.html">Administration</a></summary><ul><li><a href="../../guide/administration/tableau-de-bord.html" data-page="guide/administration/tableau-de-bord.html">Tableau de bord</a></li><li><a href="../../guide/administration/structure-academique.html" data-page="guide/administration/structure-academique.html">Structure académique</a></li><li><a href="../../guide/administration/cours.html" data-page="guide/administration/cours.html">Cours et modules</a></li><li><a href="../../guide/administration/etudiants.html" data-page="guide/administration/etudiants.html" aria-current="page">Étudiants</a></li><li><a href="../../guide/administration/enseignants.html" data-page="guide/administration/enseignants.html">Enseignants (formateurs)</a></li><li><a href="../../guide/administration/emploi-du-temps.html" data-page="guide/administration/emploi-du-temps.html">Emploi du temps</a></li><li><a href="../../guide/administration/notes.html" data-page="guide/administration/notes.html">Notes et relevés</a></li><li><a href="../../guide/administration/banque-epreuves.html" data-page="guide/administration/banque-epreuves.html">Banque d&#x27;épreuves</a></li><li><a href="../../guide/administration/assiduite.html" data-page="guide/administration/assiduite.html">Assiduité</a></li><li><a href="../../guide/administration/coordonnateurs.html" data-page="guide/administration/coordonnateurs.html">Coordonnateurs de filière</a></li><li><a href="../../guide/administration/preinscriptions.html" data-page="guide/administration/preinscriptions.html">Préinscriptions (validation)</a></li><li><a href="../../guide/administration/scolarite.html" data-page="guide/administration/scolarite.html">Scolarité et paiements</a></li><li><a href="../../guide/administration/apercu-financier.html" data-page="guide/administration/apercu-financier.html">Aperçu financier (revenus et dépenses)</a></li><li><a href="../../guide/administration/salaires.html" data-page="guide/administration/salaires.html">Salaires (personnel et formateurs)</a></li><li><a href="../../guide/administration/heures-vacataires.html" data-page="guide/administration/heures-vacataires.html">Heures des vacataires</a></li><li><a href="../../guide/administration/inventaire.html" data-page="guide/administration/inventaire.html">Inventaire et demandes</a></li><li><a href="../../guide/administration/personnel-conges.html" data-page="guide/administration/personnel-conges.html">Personnel et congés</a></li><li><a href="../../guide/administration/systeme.html" data-page="guide/administration/systeme.html">Système (paramètres, utilisateurs, rôles)</a></li></ul></details></li><li><a href="../../guide/portail-formateur.html" data-page="guide/portail-formateur.html">Portail formateur</a></li><li><a href="../../guide/coordonnateur.html" data-page="guide/coordonnateur.html">Coordonnateur de filière</a></li><li><a href="../../guide/portail-etudiant.html" data-page="guide/portail-etudiant.html">Portail étudiant</a></li><li><a href="../../guide/faq.html" data-page="guide/faq.html">Questions fréquentes</a></li><li><a href="../../guide/glossaire.html" data-page="guide/glossaire.html">Glossaire</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../../index.html">Accueil</a> <span aria-hidden="true">›</span> <a href="../../guide/index.html">Guide d&#x27;utilisation</a> <span aria-hidden="true">›</span> <a href="../../guide/administration/index.html">Administration</a></nav>
+      <h1>Étudiants</h1>
+      <div id="bandeau-parcours"></div>
+      
+<p><strong>Menu :</strong> Étudiants — <strong>Accès :</strong> domaine <em>Étudiants</em> (Écriture pour ajouter, modifier ou supprimer).</p>
+<p>La page « Liste des étudiants » regroupe tous les dossiers étudiants de l'année sélectionnée.</p>
+<h2 id="trouver-un-etudiant">Trouver un étudiant<a class="headerlink" href="#trouver-un-etudiant" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : La liste des étudiants : (1) ajouter, (2) rechercher, (3) actions sur une ligne"><img src="../../images/captures/05_etudiants_liste.jpg" alt="La liste des étudiants : (1) ajouter, (2) rechercher, (3) actions sur une ligne" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>La liste des étudiants : (1) ajouter, (2) rechercher, (3) actions sur une ligne</figcaption></figure>
+<ul>
+<li><strong>Recherche</strong> : tapez un nom, un matricule ou un email dans la case « Rechercher un étudiant… ». La liste se filtre au fur et à mesure.</li>
+<li><strong>Filtres</strong> « Filière » et « Classe » au-dessus du tableau pour n'afficher qu'un groupe.</li>
+<li>Le tableau affiche : Matricule, Nom complet, Contact, Email, Filière, Classe, Actions.</li>
+</ul>
+<h2 id="ajouter-un-etudiant-inscription-directe">Ajouter un étudiant (inscription directe)<a class="headerlink" href="#ajouter-un-etudiant-inscription-directe" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Le formulaire « Ajouter un étudiant »"><img src="../../images/captures/07_etudiant_ajout.jpg" alt="Le formulaire « Ajouter un étudiant »" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Le formulaire « Ajouter un étudiant »</figcaption></figure>
+<p>À utiliser pour un étudiant qui n'est <strong>pas</strong> passé par la préinscription en ligne. Sinon, utilisez <a href="preinscriptions.html">Préinscriptions</a> : l'étudiant y est créé automatiquement.</p>
+<ol>
+<li>Cliquez sur <strong>Ajouter un étudiant</strong>.</li>
+<li>
+<p>Remplissez l'identité :</p>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Champ</th>
+<th>Remarque</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matricule</td>
+<td>Laissez vide : il est <strong>généré automatiquement</strong> (<code>4 lettres de la filière-année-numéro</code>, ex. <code>GÉNI-2026-0007</code>).</td>
+</tr>
+<tr>
+<td>Nom complet</td>
+<td>NOM puis prénoms.</td>
+</tr>
+<tr>
+<td>Date de naissance</td>
+<td></td>
+</tr>
+<tr>
+<td>Numéro de téléphone</td>
+<td></td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Doit être unique.</td>
+</tr>
+<tr>
+<td>Nom du parent / tuteur, WhatsApp du parent</td>
+<td>Le WhatsApp sert aux notifications d'absence. Format conseillé : <code>+237 6XX XXX XXX</code>.</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li>
+<p>Choisissez la <strong>Filière</strong>, puis la spécialité, le cycle et le niveau. Le message « Classe attribuée automatiquement : … » confirme la classe retenue.</p>
+</li>
+<li>Joignez éventuellement les documents : « Photo d'identité », « Acte de naissance », « CNI / Passeport », « Diplômes précédents (plusieurs possibles) ».</li>
+<li>Cliquez sur <strong>Enregistrer</strong>.</li>
+</ol>
+<p>L'étudiant est créé avec :</p>
+<ul>
+<li>son <strong>inscription</strong> dans la classe pour l'année active ;</li>
+<li>son <strong>compte portail</strong> (nom d'utilisateur et mot de passe initial générés automatiquement).</li>
+</ul>
+<h2 id="consulter-la-fiche-dun-etudiant">Consulter la fiche d'un étudiant<a class="headerlink" href="#consulter-la-fiche-dun-etudiant" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Le panneau « Détails de l'étudiant »"><img src="../../images/captures/06_etudiant_details.jpg" alt="Le panneau « Détails de l'étudiant »" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Le panneau « Détails de l'étudiant »</figcaption></figure>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Bas du panneau : paiements et échéancier de l'étudiant"><img src="../../images/captures/06b_etudiant_details_bas.jpg" alt="Bas du panneau : paiements et échéancier de l'étudiant" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Bas du panneau : paiements et échéancier de l'étudiant</figcaption></figure>
+<p>Cliquez sur l'icône <strong>Voir détails</strong> (œil). Le panneau « Détails de l'étudiant » affiche :</p>
+<ul>
+<li>l'identité, la filière, la classe, les documents ;</li>
+<li>les <strong>paiements</strong> enregistrés ;</li>
+<li><strong>Echeancier et alertes</strong> : le plan de paiement de l'étudiant (étiquette <em>Global</em> = échéancier de la classe, <em>Personnel</em> = échéancier propre à l'étudiant) et le montant éventuellement en retard ;</li>
+<li><strong>Accès Portail Étudiant</strong> : « Nom d'utilisateur » et « Mot de passe initial » à communiquer à l'étudiant.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Remettre ses identifiants à un étudiant</p>
+<p>Ouvrez la fiche, recopiez le nom d'utilisateur et le mot de passe initial de la rubrique <em>Accès Portail Étudiant</em>. Si le mot de passe indique « Non disponible ou déjà modifié », demandez à un administrateur de le réinitialiser (<strong>Système</strong> → <em>Utilisateurs</em>).</p>
+</div>
+<h2 id="donner-un-echeancier-personnalise-a-un-etudiant">Donner un échéancier personnalisé à un étudiant<a class="headerlink" href="#donner-un-echeancier-personnalise-a-un-etudiant" title="Lien vers cette section">#</a></h2>
+<p>Par défaut, l'étudiant suit l'échéancier de sa classe. Pour un arrangement particulier (paiement étalé, dates décalées) :</p>
+<ol>
+<li>Ouvrez la fiche de l'étudiant.</li>
+<li>Dans <em>Echeancier et alertes</em>, cliquez sur <strong>Configurer</strong>.</li>
+<li>Dans la fenêtre « Echeancier personnalise », ajustez chaque tranche (Libelle, Montant, Echeance). <strong>Ajouter une tranche</strong> en crée une nouvelle ; l'icône corbeille en retire une.</li>
+<li>Enregistrez.</li>
+</ol>
+<p>Pour revenir à l'échéancier de la classe, cliquez sur <strong>Revenir au global</strong>.</p>
+<h2 id="modifier-ou-supprimer-un-etudiant">Modifier ou supprimer un étudiant<a class="headerlink" href="#modifier-ou-supprimer-un-etudiant" title="Lien vers cette section">#</a></h2>
+<ul>
+<li>Icône <strong>Modifier</strong> (crayon) : corrigez les informations puis enregistrez. Le mot de passe initial ne peut pas être modifié ici.</li>
+<li>Icône <strong>Supprimer</strong> (corbeille) puis confirmez.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Suppression</p>
+<p>Supprimer un étudiant efface son dossier, ses inscriptions, notes et paiements. Pour un étudiant qui quitte l'établissement, conservez plutôt son dossier.</p>
+</div>
+<h2 id="carte-etudiant-et-certificat-de-scolarite">Carte étudiant et certificat de scolarité<a class="headerlink" href="#carte-etudiant-et-certificat-de-scolarite" title="Lien vers cette section">#</a></h2>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : La carte étudiant, prête à imprimer"><img src="../../images/captures/08_carte_etudiant.jpg" alt="La carte étudiant, prête à imprimer" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>La carte étudiant, prête à imprimer</figcaption></figure>
+<figure class="capture"><button type="button" class="zoom" aria-label="Agrandir la capture : Le certificat de scolarité"><img src="../../images/captures/08b_certificat.jpg" alt="Le certificat de scolarité" loading="lazy" decoding="async" width="1600" height="1000"></button><figcaption>Le certificat de scolarité</figcaption></figure>
+<p>Sur la ligne de l'étudiant :</p>
+<ul>
+<li><strong>Carte Étudiant</strong> : aperçu de la carte (bouton pour basculer Recto / Verso), puis <strong>PDF Recto</strong>, <strong>PDF Verso</strong>, <strong>PDF Complet (Recto + Verso)</strong> ou <strong>Imprimer</strong>.</li>
+<li><strong>Certificat de scolarité</strong> : le certificat est généré avec les informations de l'établissement (nom, directeur… définis dans <strong>Système</strong> → <em>Apparence &amp; École</em>), puis téléchargé ou imprimé.</li>
+</ul>
+<h2 id="exporter">Exporter<a class="headerlink" href="#exporter" title="Lien vers cette section">#</a></h2>
+<ul>
+<li><strong>Exporter (Excel)</strong> : la liste affichée (avec les filtres en cours) dans un fichier Excel.</li>
+<li><strong>Exporter par Tutelle</strong> : export regroupé par université / organisme de tutelle.</li>
+</ul>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../../guide/administration/cours.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Cours et modules</strong></a><a class="suiv" href="../../guide/administration/enseignants.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Enseignants (formateurs)</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#trouver-un-etudiant">Trouver un étudiant</a></li><li><a href="#ajouter-un-etudiant-inscription-directe">Ajouter un étudiant (inscription directe)</a></li><li><a href="#consulter-la-fiche-dun-etudiant">Consulter la fiche d&#x27;un étudiant</a></li><li><a href="#donner-un-echeancier-personnalise-a-un-etudiant">Donner un échéancier personnalisé à un étudiant</a></li><li><a href="#modifier-ou-supprimer-un-etudiant">Modifier ou supprimer un étudiant</a></li><li><a href="#carte-etudiant-et-certificat-de-scolarite">Carte étudiant et certificat de scolarité</a></li><li><a href="#exporter">Exporter</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../../assets/donnees.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

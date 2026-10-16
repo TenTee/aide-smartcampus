@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr" data-racine="../" data-page="developpeurs/conventions.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conventions de code · SmartCampus · Aide</title>
+<meta name="description" content="Tout pour utiliser, installer et faire évoluer la plateforme SmartCampus">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet">Installation</a><a href="../developpeurs/index.html" class="onglet" aria-current="true">Développeurs</a></nav>
+    <p class="nav-titre">Développeurs</p><ul class="nav-arbre"><li><a href="../developpeurs/index.html" data-page="developpeurs/index.html">Présentation</a></li><li><a href="../developpeurs/architecture.html" data-page="developpeurs/architecture.html">Architecture</a></li><li><a href="../developpeurs/applications.html" data-page="developpeurs/applications.html">Carte des applications</a></li><li><a href="../developpeurs/permissions.html" data-page="developpeurs/permissions.html">Permissions et cloisonnement</a></li><li><a href="../developpeurs/tests.html" data-page="developpeurs/tests.html">Tests automatisés</a></li><li><a href="../developpeurs/ajouter-une-fonctionnalite.html" data-page="developpeurs/ajouter-une-fonctionnalite.html">Ajouter une fonctionnalité</a></li><li><a href="../developpeurs/conventions.html" data-page="developpeurs/conventions.html" aria-current="page">Conventions de code</a></li><li><a href="../developpeurs/api.html" data-page="developpeurs/api.html">Référence API</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> <a href="../developpeurs/index.html">Développeurs</a></nav>
+      <h1>Conventions de code</h1>
+      <div id="bandeau-parcours"></div>
+      
+<h2 id="langue">Langue<a class="headerlink" href="#langue" title="Lien vers cette section">#</a></h2>
+<ul>
+<li><strong>Domaine métier en français</strong> (modèles, champs, messages, tests) : <code>Inscription</code>, <code>solde_restant</code>, <code>test_une_bourse_ne_sert_qu_une_fois</code>. C'est la langue des utilisateurs et des messages d'erreur affichés.</li>
+<li>Termes techniques génériques en anglais acceptés (<code>serializer</code>, <code>queryset</code>, <code>payload</code>).</li>
+<li>Messages d'erreur destinés à l'utilisateur : phrase complète en français, qui dit <strong>quoi faire</strong> (« Le récapitulatif ne peut être clôturé qu'à partir du dernier jour du mois. »).</li>
+</ul>
+<h2 id="backend-python-django">Backend (Python / Django)<a class="headerlink" href="#backend-python-django" title="Lien vers cette section">#</a></h2>
+<ul>
+<li>Style PEP 8, lignes ≤ 120 caractères. Vérification : <code>ruff check back-istc</code> (si installé).</li>
+<li>Montants : <code>Decimal</code>, jamais <code>float</code>. Dates : <code>django.utils.timezone</code>.</li>
+<li>Opérations multi-tables (paiement d'une campagne, approbation d'une préinscription, congés) dans <code>transaction.atomic()</code>.</li>
+<li>Pas de requête dans une boucle quand un <code>select_related</code> / <code>prefetch_related</code> / agrégat suffit.</li>
+<li>Les imports à effet de bord (signaux dans <code>apps.py</code>) portent <code># noqa: F401</code>.</li>
+<li>Ne jamais renvoyer un mot de passe ou un secret dans une liste ; <code>initial_password</code> est en lecture seule.</li>
+<li>Erreurs : <code>ValidationError</code> (400) pour une saisie invalide, <code>PermissionDenied</code> (403) pour un droit manquant.</li>
+</ul>
+<h2 id="frontend-nextjs-react">Frontend (Next.js / React)<a class="headerlink" href="#frontend-nextjs-react" title="Lien vers cette section">#</a></h2>
+<ul>
+<li>Composants fonctionnels + hooks ; une page = <code>page.js</code> dans <code>src/app/...</code>.</li>
+<li>Tout appel réseau passe par <code>src/services/api/services.js</code>.</li>
+<li>Formulaires : <code>react-hook-form</code> + <code>yup</code> quand le formulaire dépasse quelques champs.</li>
+<li>Libellés d'interface en français, cohérents avec le guide utilisateur (si vous renommez un bouton, mettez à jour <code>docs/guide/</code>).</li>
+<li>Pas de <code>alert()</code> pour une erreur serveur : <code>Snackbar</code> + <code>getApiErrorMessage</code>.</li>
+<li><code>npm run lint</code> doit passer sans erreur. Configuration : <code>frontend/eslint.config.mjs</code> (<code>eslint-config-next</code>) ; <code>react/no-unescaped-entities</code> est désactivée (apostrophes françaises) et <code>react-hooks/set-state-in-effect</code> est en avertissement, le temps de migrer les composants concernés : ne pas ajouter de nouveaux avertissements.</li>
+</ul>
+<h2 id="git">Git<a class="headerlink" href="#git" title="Lien vers cette section">#</a></h2>
+<ul>
+<li>Branche par sujet : <code>feature/bourses-externes</code>, <code>fix/solde-portail</code>.</li>
+<li>Messages de commit à l'impératif, en français : <code>Corrige le calcul du solde avec réduction</code>.</li>
+<li>Une pull request = un sujet, avec : contexte, captures d'écran pour l'interface, tests ajoutés, impact migration / configuration.</li>
+<li>Ne jamais committer : <code>.env</code>, <code>db.sqlite3</code>, <code>media/</code>, <code>venv/</code>, <code>node_modules/</code>, <code>.next/</code> (voir <code>.gitignore</code>).</li>
+</ul>
+<h2 id="revue-de-code-points-a-verifier">Revue de code — points à vérifier<a class="headerlink" href="#revue-de-code-points-a-verifier" title="Lien vers cette section">#</a></h2>
+<ol>
+<li>Les droits sont-ils vérifiés côté serveur ?</li>
+<li>Une route de portail filtre-t-elle bien sur l'utilisateur connecté ?</li>
+<li>Les calculs financiers passent-ils par <code>paiements/finance.py</code> ?</li>
+<li>Y a-t-il une migration ? Est-elle réversible / sans perte ?</li>
+<li>Un test couvre-t-il le changement ?</li>
+<li>Le guide utilisateur est-il à jour ?</li>
+</ol>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../developpeurs/ajouter-une-fonctionnalite.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Ajouter une fonctionnalité</strong></a><a class="suiv" href="../developpeurs/api.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Référence API</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#langue">Langue</a></li><li><a href="#backend-python-django">Backend (Python / Django)</a></li><li><a href="#frontend-nextjs-react">Frontend (Next.js / React)</a></li><li><a href="#git">Git</a></li><li><a href="#revue-de-code-points-a-verifier">Revue de code — points à vérifier</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../assets/donnees.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

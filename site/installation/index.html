@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr" data-racine="../" data-page="installation/index.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installation et configuration · SmartCampus · Aide</title>
+<meta name="description" content="Cette partie s&#x27;adresse à la personne chargée de mettre en place SmartCampus (responsable informatique, prestataire). Elle explique chaque étape commande par com">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="marque" href="../index.html"><span class="logo" aria-hidden="true">SC</span><span>SmartCampus · Aide</span></a>
+  <nav class="onglets" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet" aria-current="true">Installation</a><a href="../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+  <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher…</span><kbd>/</kbd>
+  </button>
+  <a class="btn-icone" href="../SmartCampus_Documentation_complete.docx" title="Télécharger la version Word" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="sr">Version Word</span></a>
+  <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème"><svg class="ic ic-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<div class="cadre">
+  <aside class="nav" id="nav" aria-label="Navigation">
+    <nav class="onglets-mobile" aria-label="Rubriques"><a href="../guide/index.html" class="onglet">Guide d&#x27;utilisation</a><a href="../installation/index.html" class="onglet" aria-current="true">Installation</a><a href="../developpeurs/index.html" class="onglet">Développeurs</a></nav>
+    <p class="nav-titre">Installation</p><ul class="nav-arbre"><li><a href="../installation/index.html" data-page="installation/index.html" aria-current="page">Présentation</a></li><li><a href="../installation/prerequis.html" data-page="installation/prerequis.html">Prérequis</a></li><li><a href="../installation/installation-locale.html" data-page="installation/installation-locale.html">Installation sur un poste (test)</a></li><li><a href="../installation/deploiement-serveur.html" data-page="installation/deploiement-serveur.html">Mise en ligne sur un serveur</a></li><li><a href="../installation/configuration.html" data-page="installation/configuration.html">Fichier de configuration (.env)</a></li><li><a href="../installation/sauvegardes.html" data-page="installation/sauvegardes.html">Sauvegardes et restauration</a></li><li><a href="../installation/mise-a-jour.html" data-page="installation/mise-a-jour.html">Mettre à jour la plateforme</a></li><li><a href="../installation/depannage.html" data-page="installation/depannage.html">Dépannage</a></li></ul>
+  </aside>
+  <main id="contenu" tabindex="-1">
+    
+    <article class="page">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> <span>Installation et configuration</span></nav>
+      <h1>Installation et configuration</h1>
+      <div id="bandeau-parcours"></div>
+      
+<p>Cette partie s'adresse à la personne chargée de <strong>mettre en place</strong> SmartCampus (responsable informatique, prestataire). Elle explique chaque étape commande par commande ; il suffit de savoir copier-coller dans un terminal.</p>
+<h2 id="comment-la-plateforme-est-construite">Comment la plateforme est construite<a class="headerlink" href="#comment-la-plateforme-est-construite" title="Lien vers cette section">#</a></h2>
+<p>SmartCampus comporte <strong>deux programmes</strong> qui fonctionnent ensemble :</p>
+<figure class="diagramme" markdown="0"><img class="seulement-clair" src="../assets/diagrammes/e28fbabdf900-clair.svg" alt="Diagramme" loading="lazy"><img class="seulement-sombre" src="../assets/diagrammes/e28fbabdf900-sombre.svg" alt="Diagramme" loading="lazy"></figure>
+<div class="tableau"><table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Dossier</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Backend</strong> (API)</td>
+<td><code>back-istc/</code></td>
+<td>Calculs, droits d'accès, base de données, fichiers. Écrit en Python / Django.</td>
+</tr>
+<tr>
+<td><strong>Frontend</strong> (interface)</td>
+<td><code>frontend/</code></td>
+<td>Les pages affichées dans le navigateur. Écrit en JavaScript / Next.js.</td>
+</tr>
+<tr>
+<td><strong>Base de données</strong></td>
+<td>—</td>
+<td>PostgreSQL en production (SQLite pour un essai sur un poste).</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td><code>docs/</code></td>
+<td>Ce site (généré avec MkDocs).</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="parcours-conseille">Parcours conseillé<a class="headerlink" href="#parcours-conseille" title="Lien vers cette section">#</a></h2>
+<ol>
+<li><a href="prerequis.html">Prérequis</a> : ce qu'il faut avoir avant de commencer.</li>
+<li><a href="installation-locale.html">Installation sur un poste (test)</a> : pour essayer la plateforme ou former les utilisateurs.</li>
+<li><a href="deploiement-serveur.html">Mise en ligne sur un serveur</a> : l'installation définitive.</li>
+<li><a href="configuration.html">Fichier de configuration (.env)</a> : la liste de tous les réglages.</li>
+<li><a href="sauvegardes.html">Sauvegardes et restauration</a> : <strong>à mettre en place dès le premier jour</strong>.</li>
+<li><a href="mise-a-jour.html">Mettre à jour la plateforme</a>.</li>
+<li><a href="depannage.html">Dépannage</a> : les erreurs courantes et leurs solutions.</li>
+</ol>
+    </article>
+    <nav class="prec-suiv" aria-label="Pages voisines"><a class="prec" href="../guide/glossaire.html"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Précédent</span><strong>Glossaire</strong></a><a class="suiv" href="../installation/prerequis.html"><span>Suivant <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><strong>Prérequis</strong></a></nav>
+    <footer class="pied">
+      <p>Centre d&#x27;aide SmartCampus · généré le 16/10/2026</p>
+      <p><button type="button" class="lien-discret" onclick="window.print()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg> Imprimer cette page</button></p>
+    </footer>
+  </main>
+  <aside class="colonne-toc"><nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p><ul><li><a href="#comment-la-plateforme-est-construite">Comment la plateforme est construite</a></li><li><a href="#parcours-conseille">Parcours conseillé</a></li></ul></nav></aside>
+</div>
+<div class="voile" id="voile" hidden></div>
+<script src="../assets/donnees.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
