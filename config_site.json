@@ -1,6 +1,6 @@
 {
   "titre": "Centre d'aide SmartCampus",
-  "sous_titre": "Tout pour utiliser, installer et faire évoluer la plateforme SmartCampus",
+  "sous_titre": "Tout pour bien utiliser la plateforme SmartCampus au quotidien",
   "nom_court": "SmartCampus · Aide",
   "slogan": "Simplifier aujourd'hui, former demain",
   "contact": {
@@ -8,7 +8,11 @@
     "telephone": "",
     "remarque": "Renseignez l'email et/ou le téléphone du support : ils apparaissent sur le bouton « Nous contacter » et dans les encadrés « Besoin d'aide ? ». Laissés vides, ces boutons mènent à la FAQ."
   },
-  "fichier_word": "SmartCampus_Documentation_complete.docx",
+  "sections_exclues": [
+    "installation",
+    "developpeurs"
+  ],
+  "remarque_sections_exclues": "Rubriques de la documentation non publiées dans le centre d'aide (réservé aux utilisateurs). Le fichier Word n'est plus proposé car il contient aussi ces rubriques ; remettez la clé fichier_word pour le réactiver.",
   "capture_accueil": "images/captures/02_tableau_de_bord.jpg",
   "recherches_suggerees": [
     "saisir des notes",
@@ -140,36 +144,6 @@
         "guide/administration/tableau-de-bord.md",
         "guide/administration/systeme.md",
         "guide/administration/apercu-financier.md"
-      ]
-    },
-    {
-      "id": "informatique",
-      "icone": "serveur",
-      "titre": "Responsable informatique",
-      "resume": "J'installe, sauvegarde et mets à jour le serveur.",
-      "pages": [
-        "installation/index.md",
-        "installation/prerequis.md",
-        "installation/deploiement-serveur.md",
-        "installation/configuration.md",
-        "installation/sauvegardes.md",
-        "installation/mise-a-jour.md",
-        "installation/depannage.md"
-      ]
-    },
-    {
-      "id": "developpeur",
-      "icone": "code",
-      "titre": "Développeur",
-      "resume": "Je fais évoluer le code de la plateforme.",
-      "pages": [
-        "developpeurs/index.md",
-        "developpeurs/architecture.md",
-        "developpeurs/applications.md",
-        "developpeurs/permissions.md",
-        "developpeurs/tests.md",
-        "developpeurs/ajouter-une-fonctionnalite.md",
-        "developpeurs/conventions.md"
       ]
     }
   ],
@@ -343,44 +317,6 @@
         "guide/roles-et-acces.md",
         "guide/administration/systeme.md",
         "guide/administration/inventaire.md"
-      ]
-    },
-    {
-      "id": "installation",
-      "titre": "Installation & serveur",
-      "icone": "serveur",
-      "couleur": "ardoise",
-      "technique": true,
-      "resume": "Prérequis, mise en ligne, configuration, sauvegardes, mises à jour et dépannage.",
-      "profil": "informatique",
-      "pages": [
-        "installation/index.md",
-        "installation/prerequis.md",
-        "installation/installation-locale.md",
-        "installation/deploiement-serveur.md",
-        "installation/configuration.md",
-        "installation/sauvegardes.md",
-        "installation/mise-a-jour.md",
-        "installation/depannage.md"
-      ]
-    },
-    {
-      "id": "developpeurs",
-      "titre": "Développeurs",
-      "icone": "code",
-      "couleur": "ardoise",
-      "technique": true,
-      "resume": "Architecture, applications, permissions, tests, conventions et API.",
-      "profil": "developpeur",
-      "pages": [
-        "developpeurs/index.md",
-        "developpeurs/architecture.md",
-        "developpeurs/applications.md",
-        "developpeurs/permissions.md",
-        "developpeurs/tests.md",
-        "developpeurs/ajouter-une-fonctionnalite.md",
-        "developpeurs/conventions.md",
-        "developpeurs/api.md"
       ]
     }
   ]

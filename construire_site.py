@@ -427,10 +427,9 @@ def gabarit(conf, *, titre_page, page_url, contenu, nav, colonne="", fil="", ban
     racine = "../" * page_url.count("/")
     liens = [("Accueil", "index.html", page_url == "index.html"),
              ("Rubriques", "index.html#rubriques", page_url.startswith("rubriques/")),
-             ("Guide", "guide/index.html", page_url.startswith("guide/") and not page_url.endswith("faq.html")),
-             ("Installation", "installation/index.html", page_url.startswith("installation/")),
-             ("Développeurs", "developpeurs/index.html", page_url.startswith("developpeurs/")),
-             ("FAQ", "guide/faq.html", page_url.endswith("faq.html"))]
+             ("Guide", "guide/index.html", page_url.startswith("guide/") and not page_url.endswith(("faq.html", "glossaire.html"))),
+             ("FAQ", "guide/faq.html", page_url.endswith("faq.html")),
+             ("Glossaire", "guide/glossaire.html", page_url.endswith("glossaire.html"))]
     onglets = "".join(f'<a href="{racine}{u}" class="onglet"{ACTIF if a else ""}>{esc(n)}</a>' for n, u, a in liens)
     word = conf.get("fichier_word_url")
     lien_word = (f'<a class="btn-icone" href="{racine}{word}" title="Télécharger la version Word" download>'
@@ -608,7 +607,6 @@ def page_accueil(conf, categories, racine, infos, taches, corps_index):
             f'<span class="cr-desc">{esc(cat["resume"])}</span>'
             f'<span class="cr-pied"><span>{nb} article{"s" if nb > 1 else ""}</span>{icone("fleche")}</span></a>')
     principales = "".join(c for c, cat in zip(cartes, categories) if not cat.get("technique"))
-    techniques = "".join(c for c, cat in zip(cartes, categories) if cat.get("technique"))
     moitie = (len(taches) + 1) // 2
     pop_g = liste_numerotee([(t, u) for t, u, _ in taches[:moitie]])
     pop_d = f'<ol class="liste-num" start="{moitie + 1}">' + "".join(
@@ -659,12 +657,6 @@ def page_accueil(conf, categories, racine, infos, taches, corps_index):
   <div class="bloc-entete"><div><h2 id="titre-profils">Je suis…</h2><p>Un parcours de lecture adapté à votre rôle. Votre progression est mémorisée sur cet appareil.</p></div></div>
   <div class="grille-profils">{profils}</div>
   <div id="detail-parcours" class="detail-parcours" hidden></div>
-</section>
-
-<section class="bloc" aria-labelledby="titre-technique">
-  <div class="bloc-entete"><div><h2 id="titre-technique">Pour les équipes techniques</h2><p>Installer, maintenir et faire évoluer la plateforme.</p></div>
-    {f'<a class="lien-fleche" href="{word}" download>{icone("telecharger")} Toute la documentation en Word</a>' if word else ""}</div>
-  <div class="grille-rubriques deux">{techniques}</div>
 </section>
 
 <section class="bloc support" id="support" aria-labelledby="titre-support">
@@ -738,6 +730,9 @@ def main():
 
     # fichiers non Markdown (captures, fichier Word…)
     for f in docs.rglob("*"):
+        rel = f.relative_to(docs)
+        if rel.parts[0] in conf.get("sections_exclues", []) or (f.suffix.lower() == ".docx" and f.name != conf.get("fichier_word")):
+            continue
         if f.is_file() and f.suffix.lower() != ".md" and not f.name.startswith("."):
             dest = sortie / f.relative_to(docs)
             dest.parent.mkdir(parents=True, exist_ok=True)
@@ -748,12 +743,27 @@ def main():
         avertir(f"capture d'accueil introuvable : {conf['capture_accueil']}")
         conf["capture_accueil"] = ""
 
+    exclues = set(conf.get("sections_exclues", []))
+
+    def nettoyer_liens(corps: str) -> str:
+        """Retire les renvois vers les rubriques exclues (lignes de tableau, puis liens réduits à leur texte)."""
+        if not exclues:
+            return corps
+        motif = "|".join(re.escape(e) for e in exclues)
+        lien = rf'href="(?:\.\./)*(?:{motif})/[^"]*"'
+        corps = re.sub(rf"<tr>(?:(?!</tr>).)*?{lien}.*?</tr>", "", corps, flags=re.S)
+        corps = re.sub(rf"\s*\(<a {lien}[^>]*>[^<]*</a>\)", "", corps)
+        corps = re.sub(rf"\s*(?:;\s*)?(?:voir|décrite dans)\s+<a {lien}[^>]*>[^<]*</a>", "", corps)
+        return re.sub(rf"<a {lien}[^>]*>(.*?)</a>", r"\1", corps, flags=re.S)
+
     pages = []
     for md, titre_nav, groupes in aplatir(lire_navigation(mkdocs)):
         if not (docs / md).exists():
             avertir(f"page de la navigation absente : {md}")
             continue
         rubrique = md.split("/")[0] if "/" in md else None
+        if rubrique in exclues:
+            continue
         pages.append({"md": md, "url": url_html(md), "titre_nav": titre_nav, "groupes": groupes, "rubrique": rubrique})
     pages_par_md = {p["md"]: p for p in pages}
 
@@ -763,6 +773,7 @@ def main():
     for p in pages:
         source_md = docs / p["md"]
         corps, toc, titre = convertir_page(p["md"], source_md.read_text(encoding="utf-8"), sortie, diagrammes)
+        corps = nettoyer_liens(corps)
         p.update(corps=corps, toc=toc, titre=titre or p["titre_nav"] or p["md"])
         if not p["titre_nav"]:
             p["titre_nav"] = "Présentation" if p["md"].endswith("index.md") and p["md"] != "index.md" else p["titre"]

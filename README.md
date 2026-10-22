@@ -15,7 +15,7 @@ Site d'aide interactif construit à partir de la documentation du projet (`istc-
 ## Fonctions
 
 - Recherche instantanée dans toute la documentation : touche `/` ou `Ctrl+K` / `Cmd+K`, filtre par rubrique, surlignage sur la page d'arrivée.
-- **Je suis…** : douze parcours de lecture par profil (secrétariat, comptabilité, formateur, étudiant…), avec progression mémorisée et bandeau « étape suivante » sur les pages.
+- **Je suis…** : dix parcours de lecture par profil (secrétariat, comptabilité, formateur, étudiant…), avec progression mémorisée et bandeau « étape suivante » sur les pages.
 - « Comment faire pour… » : accès direct aux procédures fréquentes.
 - Captures d'écran agrandissables (visionneuse, flèches ← →, taille réelle).
 - Définitions du glossaire au survol des termes, glossaire filtrable.
@@ -26,7 +26,7 @@ Site d'aide interactif construit à partir de la documentation du projet (`istc-
   - mode clair / sombre ;
   - adapté au téléphone ;
   - impression propre ;
-  - téléchargement de la version Word.
+  - téléchargement de la version Word (désactivé : le Word contient aussi les rubriques techniques).
 
 La progression, les cases cochées et le thème sont enregistrés dans le navigateur de chaque visiteur (rien n'est envoyé à un serveur).
 
@@ -53,6 +53,7 @@ Les diagrammes déjà dessinés sont réutilisés depuis `diagrammes/`. Pour un 
 | Titre, recherches suggérées, profils « Je suis… », articles populaires (`taches`) | `config_site.json` |
 | Rubriques thématiques (icône, couleur, pages) et coordonnées du support (`contact`) | `config_site.json` |
 | Logo | `modele/logo.png` |
+| Rubriques de la documentation non publiées (Installation, Développeurs : le centre d'aide est réservé aux utilisateurs) | `sections_exclues` dans `config_site.json` |
 | Couleurs, typographie, mise en page (charte : dossier `charte graphique/`) | `modele/style.css` (variables en haut du fichier) |
 | Comportements interactifs | `modele/app.js` |
 | Couleurs des diagrammes | `mermaid-clair.json`, `mermaid-sombre.json` |
