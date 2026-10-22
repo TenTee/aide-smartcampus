@@ -50,8 +50,10 @@ Les diagrammes déjà dessinés sont réutilisés depuis `diagrammes/`. Pour un 
 
 | Quoi | Où |
 |---|---|
-| Titre, recherches suggérées, profils « Je suis… », tâches « Comment faire pour… » | `config_site.json` |
-| Couleurs, typographie, mise en page | `modele/style.css` (variables en haut du fichier) |
+| Titre, recherches suggérées, profils « Je suis… », articles populaires (`taches`) | `config_site.json` |
+| Rubriques thématiques (icône, couleur, pages) et coordonnées du support (`contact`) | `config_site.json` |
+| Logo | `modele/logo.png` |
+| Couleurs, typographie, mise en page (charte : dossier `charte graphique/`) | `modele/style.css` (variables en haut du fichier) |
 | Comportements interactifs | `modele/app.js` |
 | Couleurs des diagrammes | `mermaid-clair.json`, `mermaid-sombre.json` |
 

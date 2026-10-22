@@ -295,9 +295,29 @@ ICONES = {
     "fermer": '<path d="M18 6 6 18M6 6l12 12"/>',
     "fleche": '<path d="M5 12h14M13 6l6 6-6 6"/>',
     "retour": '<path d="M19 12H5M11 18l-6-6 6-6"/>',
+    "chevron": '<path d="m6 9 6 6 6-6"/>',
+    "chevron-d": '<path d="m9 6 6 6-6 6"/>',
     "telecharger": '<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>',
     "imprimer": '<path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/>',
     "haut": '<path d="M12 19V5M6 11l6-6 6 6"/>',
+    "maison": '<path d="M3 11 12 3l9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/>',
+    "mail": '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+    "telephone": '<path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/>',
+    "horloge": '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    "calendrier": '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M7.5 14h.01M12 14h.01M16.5 14h.01M7.5 17.5h.01M12 17.5h.01"/>',
+    "etoile": '<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
+    "ampoule": '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/>',
+    "casque": '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/><path d="M19 20c0 1-1.5 2-4 2h-2"/>',
+    "check": '<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
+    "pouce-haut": '<path d="M7 11v9H4v-9zM7 11l4-8c1.5 0 2.5 1 2.5 2.5V9h5a2 2 0 0 1 2 2.3l-1.2 7A2 2 0 0 1 17.3 20H7"/>',
+    "pouce-bas": '<path d="M7 13V4H4v9zM7 13l4 8c1.5 0 2.5-1 2.5-2.5V15h5a2 2 0 0 0 2-2.3l-1.2-7A2 2 0 0 0 17.3 4H7"/>',
+    "fusee": '<path d="M5 15c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9A2.2 2.2 0 0 0 5 15z"/><path d="m12 15-3-3a22 22 0 0 1 2-4A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/>',
+    "livre-ouvert": '<path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/>',
+    "document": '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>',
+    "carte": '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/>',
+    "engrenage": '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>',
+    "cible": '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+    "niveau": '<path d="M5 20v-5M10 20v-9M15 20V7M20 20V3"/>',
     "inscription": '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 18v-6M9 15h6"/>',
     "etudiant": '<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/>',
     "formateur": '<rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/>',
@@ -316,7 +336,8 @@ ICONES = {
 
 COURANT = ' aria-current="page"'
 ACTIF = ' aria-current="true"'
-SEPARATEUR = ' <span aria-hidden="true">›</span> '
+SEPARATEUR = ' <span class="sep" aria-hidden="true">›</span> '
+MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
 
 
 def icone(nom: str, classe: str = "ic") -> str:
@@ -328,37 +349,57 @@ def esc(t: str) -> str:
     return html.escape(t, quote=True)
 
 
-def construire_nav_html(pages, page_url, racine):
-    """Barre latérale : arborescence de la rubrique courante."""
-    rubrique = page_url.split("/")[0] if "/" in page_url else None
-    blocs, groupe_ouvert = [], None
-    for p in pages:
-        if p["rubrique"] != rubrique:
-            continue
-        groupes = p["groupes"][1:]  # sans la rubrique elle-même
-        groupe = groupes[0] if groupes else None
-        if groupe != groupe_ouvert:
-            if groupe_ouvert is not None:
-                blocs.append("</ul></details></li>")
-            if groupe is not None:
-                ouvert = " open" if any(q["url"] == page_url and q["groupes"][1:2] == (groupe,) for q in pages) else ""
-                index_groupe = p["url"] if p["url"].endswith("index.html") else None
-                titre_g = (f'<a href="{racine}{index_groupe}" data-page="{index_groupe}"'
-                           f'{COURANT if index_groupe == page_url else ""}>{esc(groupe)}</a>'
-                           if index_groupe else esc(groupe))
-                blocs.append(f'<li class="groupe"><details{ouvert}><summary>{titre_g}</summary><ul>')
-            groupe_ouvert = groupe
-            if groupe is not None and p["url"].endswith("index.html"):
-                continue
-        courant = ' aria-current="page"' if p["url"] == page_url else ""
-        blocs.append(f'<li><a href="{racine}{p["url"]}" data-page="{p["url"]}"{courant}>{esc(p["titre_nav"])}</a></li>')
-    if groupe_ouvert is not None:
-        blocs.append("</ul></details></li>")
-    if not blocs:  # accueil : les trois rubriques
-        for cle, nom in SECTIONS.items():
-            blocs.append(f'<li class="titre-rubrique"><a href="{racine}{cle}/index.html">{esc(nom)}</a></li>')
-    titre = SECTIONS.get(rubrique, "Sommaire")
-    return f'<p class="nav-titre">{esc(titre)}</p><ul class="nav-arbre">{"".join(blocs)}</ul>'
+def date_fr(d: dt.date) -> str:
+    return f"{d.day} {MOIS[d.month - 1]} {d.year}"
+
+
+def pastille_cat(cat, classe="cat-ic") -> str:
+    return f'<span class="{classe} c-{cat["couleur"]}">{icone(cat["icone"])}</span>'
+
+
+def lien_contact(conf, racine):
+    """(href, libellé) du bouton « Nous contacter »."""
+    contact = conf.get("contact") or {}
+    if contact.get("email"):
+        return f'mailto:{contact["email"]}', contact["email"]
+    if contact.get("telephone"):
+        return f'tel:{re.sub(r"[^0-9+]", "", contact["telephone"])}', contact["telephone"]
+    return f"{racine}guide/faq.html", ""
+
+
+def carte_besoin_aide(conf, racine, classe="carte-aide"):
+    href, _ = lien_contact(conf, racine)
+    contact = conf.get("contact") or {}
+    autres = []
+    if contact.get("telephone") and contact.get("email"):
+        autres.append(f'<a href="tel:{re.sub(r"[^0-9+]", "", contact["telephone"])}">{icone("telephone")} {esc(contact["telephone"])}</a>')
+    autres.append(f'<a href="{racine}guide/faq.html">Consulter la FAQ</a>')
+    return (f'<section class="{classe}" aria-label="Besoin d\'aide">'
+            f'<p class="ca-titre"><span class="ca-ic">{icone("casque")}</span>Besoin d\'aide ?</p>'
+            f'<p>Notre équipe est là pour vous accompagner.</p>'
+            f'<a class="btn-contour" href="{href}">{icone("mail")} Contacter le support</a>'
+            f'<p class="ca-autres">{" · ".join(autres)}</p></section>')
+
+
+def construire_nav_html(categories, page_url, racine, cat_courante):
+    """Barre latérale : les rubriques (catégories) et leurs articles."""
+    blocs = []
+    for cat in categories:
+        ouvert = " open" if cat_courante is cat else ""
+        url_cat = f"rubriques/{cat['id']}.html"
+        courant_cat = COURANT if page_url == url_cat else ""
+        articles = "".join(
+            f'<li><a href="{racine}{p["url"]}" data-page="{p["url"]}"{COURANT if p["url"] == page_url else ""}>{esc(p["titre_nav"])}</a></li>'
+            for p in cat["pages_obj"]
+        )
+        blocs.append(
+            f'<li class="cat"><details{ouvert}><summary>{pastille_cat(cat)}'
+            f'<a href="{racine}{url_cat}"{courant_cat}>{esc(cat["titre"])}</a>'
+            f'<span class="cat-chevron">{icone("chevron")}</span></summary>'
+            f'<ul>{articles}</ul></details></li>'
+        )
+    return (f'<button type="button" class="nav-recherche" data-ouvrir-recherche>{icone("recherche")}<span>Rechercher dans les rubriques…</span></button>'
+            f'<p class="nav-titre">Rubriques</p><ul class="nav-arbre">{"".join(blocs)}</ul>')
 
 
 def toc_html(toc):
@@ -379,19 +420,27 @@ def toc_html(toc):
     contenu = rec(racines)
     if not contenu:
         return ""
-    return f'<nav class="toc" aria-label="Sur cette page"><p class="toc-titre">Sur cette page</p>{contenu}</nav>'
+    return f'<nav class="toc" aria-label="Dans cet article"><p class="toc-titre">Dans cet article</p>{contenu}</nav>'
 
 
-def gabarit(conf, *, titre_page, page_url, contenu, nav, toc="", fil="", entete="", pied_page="", classe="", description=""):
+def gabarit(conf, *, titre_page, page_url, contenu, nav, colonne="", fil="", bandeau="", pied_page="", classe="", description=""):
     racine = "../" * page_url.count("/")
-    onglets = "".join(
-        f'<a href="{racine}{cle}/index.html" class="onglet"{ACTIF if page_url.startswith(cle + "/") else ""}>{esc(nom)}</a>'
-        for cle, nom in SECTIONS.items()
-    )
+    liens = [("Accueil", "index.html", page_url == "index.html"),
+             ("Rubriques", "index.html#rubriques", page_url.startswith("rubriques/")),
+             ("Guide", "guide/index.html", page_url.startswith("guide/") and not page_url.endswith("faq.html")),
+             ("Installation", "installation/index.html", page_url.startswith("installation/")),
+             ("Développeurs", "developpeurs/index.html", page_url.startswith("developpeurs/")),
+             ("FAQ", "guide/faq.html", page_url.endswith("faq.html"))]
+    onglets = "".join(f'<a href="{racine}{u}" class="onglet"{ACTIF if a else ""}>{esc(n)}</a>' for n, u, a in liens)
     word = conf.get("fichier_word_url")
     lien_word = (f'<a class="btn-icone" href="{racine}{word}" title="Télécharger la version Word" download>'
                  f'{icone("telecharger")}<span class="sr">Version Word</span></a>') if word else ""
+    href_contact, _ = lien_contact(conf, racine)
     titre_complet = conf["titre"] if page_url == "index.html" else f"{titre_page} · {conf['nom_court']}"
+    marque = (f'<a class="marque" href="{racine}index.html" aria-label="{esc(conf["titre"])} — accueil">'
+              f'<img src="{racine}assets/logo.png" alt="SmartCampus" width="260" height="151">'
+              f'<span class="marque-texte"><strong>Centre d\'aide</strong><small>{esc(conf.get("slogan", ""))}</small></span></a>')
+    pied_liens = "".join(f'<a href="{racine}{u}">{esc(n)}</a>' for n, u, _ in liens)
     return f"""<!doctype html>
 <html lang="fr" data-racine="{racine}" data-page="{page_url}">
 <head>
@@ -399,6 +448,7 @@ def gabarit(conf, *, titre_page, page_url, contenu, nav, toc="", fil="", entete=
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(titre_complet)}</title>
 <meta name="description" content="{esc(description or conf['sous_titre'])}">
+<meta name="theme-color" content="#1d63e0">
 <link rel="icon" href="{racine}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{racine}assets/style.css">
 <script>try{{var t=localStorage.getItem('aide-theme');if(t)document.documentElement.dataset.theme=t;}}catch(e){{}}</script>
@@ -406,36 +456,45 @@ def gabarit(conf, *, titre_page, page_url, contenu, nav, toc="", fil="", entete=
 <body class="{classe}">
 <a class="evitement" href="#contenu">Aller au contenu</a>
 <header class="barre">
+ <div class="barre-int">
   <button class="btn-icone seulement-mobile" id="ouvrir-nav" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false">{icone("menu")}</button>
-  <a class="marque" href="{racine}index.html"><span class="logo" aria-hidden="true">SC</span><span>{esc(conf["nom_court"])}</span></a>
-  <nav class="onglets" aria-label="Rubriques">{onglets}</nav>
+  {marque}
+  <nav class="onglets" aria-label="Menu principal">{onglets}</nav>
   <button class="champ-recherche" id="ouvrir-recherche" type="button" aria-label="Rechercher dans l'aide">
-    {icone("recherche")}<span>Rechercher…</span><kbd>/</kbd>
+    {icone("recherche")}<span>Rechercher dans l'aide…</span><kbd>/</kbd>
   </button>
   {lien_word}
   <button class="btn-icone" id="theme" type="button" aria-label="Changer de thème">{icone("lune", "ic ic-lune")}{icone("soleil", "ic ic-soleil")}</button>
+  <a class="btn-principal btn-contact" href="{href_contact}">{icone("mail")}<span>Nous contacter</span></a>
+ </div>
 </header>
-<div class="cadre">
+{bandeau}
+<div class="cadre{' sans-colonne' if not colonne else ''}">
   <aside class="nav" id="nav" aria-label="Navigation">
-    <nav class="onglets-mobile" aria-label="Rubriques">{onglets}</nav>
+    <nav class="onglets-mobile" aria-label="Menu principal">{onglets}</nav>
     {nav}
   </aside>
   <main id="contenu" tabindex="-1">
-    {entete}
     <article class="page">
       {fil}
-      {f'<h1>{esc(titre_page)}</h1>' if titre_page and page_url != "index.html" else ""}
       <div id="bandeau-parcours"></div>
       {contenu}
     </article>
     {pied_page}
-    <footer class="pied">
-      <p>{esc(conf["titre"])} · généré le {dt.date.today().strftime("%d/%m/%Y")}</p>
-      <p><button type="button" class="lien-discret" onclick="window.print()">{icone("imprimer")} Imprimer cette page</button></p>
-    </footer>
   </main>
-  {f'<aside class="colonne-toc">{toc}</aside>' if toc else ""}
+  {f'<aside class="colonne-droite">{colonne}</aside>' if colonne else ""}
 </div>
+<footer class="pied">
+  <div class="pied-int">
+    <a class="marque" href="{racine}index.html"><img src="{racine}assets/logo.png" alt="SmartCampus" width="260" height="151" loading="lazy">
+      <span class="marque-texte"><strong>Centre d'aide</strong><small>{esc(conf.get("slogan", ""))}</small></span></a>
+    <nav class="pied-liens" aria-label="Liens du pied de page">{pied_liens}<a href="{href_contact}">Nous contacter</a></nav>
+    <div class="pied-droite">
+      <p>© {dt.date.today().year} SmartCampus. Tous droits réservés.</p>
+      <p>Mis à jour le {dt.date.today().strftime("%d/%m/%Y")} · <button type="button" class="lien-discret" onclick="window.print()">{icone("imprimer")} Imprimer</button></p>
+    </div>
+  </div>
+</footer>
 <div class="voile" id="voile" hidden></div>
 <script src="{racine}assets/donnees.js"></script>
 <script src="{racine}assets/app.js"></script>
@@ -444,85 +503,203 @@ def gabarit(conf, *, titre_page, page_url, contenu, nav, toc="", fil="", entete=
 """
 
 
-def page_accueil(conf, pages_par_md, corps_index, ancres):
-    # l'encadré « Version Word » de docs/index.md est remplacé par le lien de la page d'accueil
+# --------------------------------------------------------------------------- bandeaux (hero)
+
+
+def ecran_portable(src: str, alt: str, classe="portable") -> str:
+    return (f'<div class="{classe}" aria-hidden="true"><div class="portable-ecran">'
+            f'<img src="{src}" alt="{esc(alt)}" loading="lazy" decoding="async"></div><div class="portable-socle"></div></div>')
+
+
+def bandeau_article(conf, racine):
+    capture = conf.get("capture_accueil")
+    visuel = ecran_portable(racine + capture, "Tableau de bord SmartCampus", "portable petit") if capture else ""
+    return f"""<section class="bandeau bandeau-article" aria-label="Centre d'aide">
+  <div class="bandeau-int">
+    <div class="bandeau-texte">
+      <p class="surtitre">Centre d'aide</p>
+      <p class="bandeau-titre">Des réponses claires pour <span class="accent">aller plus loin</span></p>
+      <p class="bandeau-sous">Des guides pas à pas, des conseils pratiques et des tutoriels pour bien utiliser SmartCampus.</p>
+    </div>
+    <p class="manuscrit" aria-hidden="true"><span>Apprendre</span><span>Gérer</span><span>Suivre</span><span>Réussir</span></p>
+    {visuel}
+    <p class="post-it" aria-hidden="true">Une école mieux gérée pour un meilleur avenir</p>
+  </div>
+</section>"""
+
+
+def bandeau_rubrique(cat, nb, minutes, fil):
+    return f"""<section class="bandeau bandeau-rubrique c-{cat['couleur']}">
+  <div class="bandeau-int">
+    <div class="bandeau-texte">
+      {fil}
+      <p class="pilule">{icone(cat['icone'])} Centre d'aide</p>
+      <h1>{esc(cat['titre'])}</h1>
+      <p class="bandeau-sous">{esc(cat['resume'])}</p>
+    </div>
+    <div class="visuel-rubrique" aria-hidden="true">
+      <span class="vr-cercle"></span>
+      <span class="vr-icone">{icone(cat['icone'])}</span>
+      <span class="flottant f1">{icone('livre-ouvert')}<span><strong>{nb} article{'s' if nb > 1 else ''}</strong> pas à pas</span></span>
+      <span class="flottant f2">{icone('horloge')}<span><strong>{minutes} min</strong> de lecture au total</span></span>
+    </div>
+  </div>
+</section>"""
+
+
+# --------------------------------------------------------------------------- pages spéciales
+
+
+def carte_article(p, racine, info, cat):
+    return (f'<li><a class="carte-article" href="{racine}{p["url"]}">{pastille_cat(cat, "ca-pastille")}'
+            f'<span class="ca-corps"><span class="ca-nom">{esc(p["titre"])}</span>'
+            f'<span class="ca-desc">{esc(info["resume"])}</span>'
+            f'<span class="ca-meta">{icone("horloge")} {info["minutes"]} min de lecture</span></span>'
+            f'{icone("fleche", "ic ca-fleche")}</a></li>')
+
+
+def liste_numerotee(items, classe="liste-num"):
+    return f'<ol class="{classe}">' + "".join(
+        f'<li><a href="{u}"><span class="num">{i}</span><span class="ln-texte">{esc(t)}</span>{icone("fleche")}</a></li>'
+        for i, (t, u) in enumerate(items, 1)) + "</ol>"
+
+
+def page_rubrique(conf, cat, racine, infos, taches, parcours_conf, pages_par_md):
+    articles = "".join(carte_article(p, racine, infos[p["url"]], cat) for p in cat["pages_obj"])
+    contenu = f"""
+<p class="pilule c-{cat['couleur']}">{icone(cat['icone'])} {esc(cat['titre'])}</p>
+<div class="titre-ligne"><h2 class="titre-section">Articles de cette rubrique</h2></div>
+<p class="sous-titre-section">Tous les guides pour « {esc(cat['titre'].lower())} », dans l'ordre conseillé de lecture.</p>
+<ul class="liste-articles">{articles}</ul>
+"""
+    # colonne droite : tâches fréquentes de la rubrique, parcours recommandé, aide
+    urls = {p["url"] for p in cat["pages_obj"]}
+    pop = [(t, racine + u) for (t, u, page) in taches if page in urls] or [(t, racine + u) for (t, u, _) in taches[:5]]
+    colonne = (f'<section class="carte-cote"><p class="cc-titre">{icone("etoile", "ic ic-etoile")} Articles populaires</p>'
+               f'{liste_numerotee(pop[:6], "liste-num compacte")}</section>')
+    prof = next((pr for pr in conf["profils"] if pr["id"] == cat.get("profil")), None)
+    if prof:
+        etapes = [pages_par_md[m] for m in prof["pages"] if m in pages_par_md]
+        lis = "".join(f'<li><a href="{racine}{p["url"]}" data-page="{p["url"]}">{icone("check")}<span>{i}. {esc(p["titre"])}</span></a></li>'
+                      for i, p in enumerate(etapes[:6], 1))
+        colonne += (f'<section class="carte-cote carte-parcours"><p class="cc-titre">{icone("livre-ouvert")} Parcours recommandé</p>'
+                    f'<p class="cc-sous">Profil « {esc(prof["titre"])} » : {esc(prof["resume"][0].lower() + prof["resume"][1:])}</p>'
+                    f'<ul class="parcours-coches">{lis}</ul>'
+                    f'<a class="btn-contour" href="{racine}index.html?profil={prof["id"]}#titre-profils">Voir le parcours complet {icone("fleche")}</a></section>')
+    colonne += carte_besoin_aide(conf, racine)
+    return contenu, colonne
+
+
+def page_accueil(conf, categories, racine, infos, taches, corps_index):
     corps_index = re.sub(r'<div class="admonition[^"]*">\s*<p class="admonition-title">Version Word</p>.*?</div>', "", corps_index, count=1, flags=re.S)
-    profils = []
-    for p in conf["profils"]:
-        etapes = [pages_par_md[m]["url"] for m in p["pages"] if m in pages_par_md]
-        profils.append(
-            f'<button type="button" class="carte-profil" data-profil="{p["id"]}" aria-pressed="false">'
-            f'<span class="pastille">{icone(p["icone"])}</span>'
-            f'<span class="profil-titre">{esc(p["titre"])}</span>'
-            f'<span class="profil-resume">{esc(p["resume"])}</span>'
-            f'<span class="profil-etapes">{len(etapes)} pages à lire</span></button>'
-        )
-    taches = []
-    for libelle, md, titre_section in conf["taches"]:
-        page = pages_par_md.get(md)
-        if not page:
-            avertir(f"tâche « {libelle} » : page {md} absente")
-            continue
-        ancre = next((a for (u, t, a) in ancres if u == page["url"] and sans_accents(titre_section) in sans_accents(t)), None)
-        if ancre is None:
-            avertir(f"tâche « {libelle} » : section « {titre_section} » introuvable dans {md}")
-        cible = page["url"] + (f"#{ancre}" if ancre else "")
-        taches.append(
-            f'<li><a href="{cible}"><span class="tache-libelle">{esc(libelle)}</span>'
-            f'<span class="tache-page">{esc(page["titre"])}</span>{icone("fleche")}</a></li>'
-        )
-    rubriques = []
-    descriptions = {
-        "guide": "Chaque écran expliqué pas à pas, avec captures : administration, portails formateur et étudiant, préinscription.",
-        "installation": "Prérequis, mise en ligne, fichier .env, sauvegardes, mises à jour et dépannage du serveur.",
-        "developpeurs": "Architecture, applications, permissions, tests et conventions pour faire évoluer le code.",
-    }
-    for cle, nom in SECTIONS.items():
-        nb = sum(1 for p in pages_par_md.values() if p["rubrique"] == cle)
-        rubriques.append(
-            f'<a class="carte-rubrique" href="{cle}/index.html"><span class="rubrique-nom">{esc(nom)}</span>'
-            f'<span class="rubrique-desc">{descriptions[cle]}</span><span class="rubrique-nb">{nb} pages {icone("fleche")}</span></a>'
-        )
-    suggestions = "".join(f'<button type="button" class="puce" data-recherche="{esc(s)}">{esc(s)}</button>' for s in conf["recherches_suggerees"])
+    profils = "".join(
+        f'<button type="button" class="carte-profil" data-profil="{p["id"]}" aria-pressed="false">'
+        f'<span class="pastille">{icone(p["icone"])}</span>'
+        f'<span class="profil-titre">{esc(p["titre"])}</span>'
+        f'<span class="profil-resume">{esc(p["resume"])}</span>'
+        f'<span class="profil-etapes">{len(p["pages"])} pages à lire</span></button>'
+        for p in conf["profils"])
+    cartes = []
+    for cat in categories:
+        nb = len(cat["pages_obj"])
+        cartes.append(
+            f'<a class="carte-rubrique{" technique" if cat.get("technique") else ""}" href="rubriques/{cat["id"]}.html">'
+            f'{pastille_cat(cat, "cr-pastille")}<span class="cr-nom">{esc(cat["titre"])}</span>'
+            f'<span class="cr-desc">{esc(cat["resume"])}</span>'
+            f'<span class="cr-pied"><span>{nb} article{"s" if nb > 1 else ""}</span>{icone("fleche")}</span></a>')
+    principales = "".join(c for c, cat in zip(cartes, categories) if not cat.get("technique"))
+    techniques = "".join(c for c, cat in zip(cartes, categories) if cat.get("technique"))
+    moitie = (len(taches) + 1) // 2
+    pop_g = liste_numerotee([(t, u) for t, u, _ in taches[:moitie]])
+    pop_d = f'<ol class="liste-num" start="{moitie + 1}">' + "".join(
+        f'<li><a href="{u}"><span class="num">{i}</span><span class="ln-texte">{esc(t)}</span>{icone("fleche")}</a></li>'
+        for i, (t, u, _) in enumerate(taches[moitie:], moitie + 1)) + "</ol>"
+    exemples = ", ".join(conf["recherches_suggerees"])
+    puces = "".join(f'<button type="button" class="puce" data-recherche="{esc(s)}">{esc(s)}</button>' for s in conf["recherches_suggerees"])
+    capture = conf.get("capture_accueil")
     word = conf.get("fichier_word_url")
+    href_contact, _ = lien_contact(conf, racine)
     return f"""
 <section class="hero">
-  <p class="surtitre">Plateforme SmartCampus</p>
-  <h1>{esc(conf["titre"])}</h1>
-  <p class="hero-texte">{esc(conf["sous_titre"])}. Choisissez votre profil ou posez votre question.</p>
-  <form class="hero-recherche" id="hero-recherche" role="search">
-    {icone("recherche")}
-    <input type="search" id="hero-q" placeholder="Ex. : enregistrer un paiement" aria-label="Rechercher dans l'aide" autocomplete="off">
-    <button type="submit" class="btn-principal">Rechercher</button>
-  </form>
-  <div class="puces" aria-label="Recherches fréquentes">{suggestions}</div>
+  <div class="hero-int">
+    <div class="hero-texte">
+      <p class="pilule">Centre d'aide</p>
+      <h1>Comment <span class="insec">pouvons-nous</span> <span class="accent">vous aider ?</span></h1>
+      <p class="hero-sous">Retrouvez ici toutes les réponses pour bien utiliser SmartCampus.</p>
+      <form class="hero-recherche" id="hero-recherche" role="search">
+        {icone("recherche")}
+        <input type="search" id="hero-q" placeholder="Rechercher une question, une fonctionnalité…" aria-label="Rechercher dans l'aide" autocomplete="off">
+        <button type="submit" class="btn-principal">Rechercher</button>
+      </form>
+      <div class="puces" aria-label="Exemples de recherches"><span class="puces-libelle">Exemples :</span>{puces}</div>
+    </div>
+    <div class="hero-visuel" aria-hidden="true">
+      <span class="blob b1"></span><span class="blob b2"></span>
+      {ecran_portable(capture, "Tableau de bord SmartCampus") if capture else ""}
+      <span class="flottant f1 c-vert">{icone("equipe")}<span>Des guides<br>pratiques</span></span>
+      <span class="flottant f2 c-rose">{icone("ampoule")}<span>Des réponses<br>rapides</span></span>
+      <span class="flottant f3 c-bleu">{icone("livre-ouvert")}<span>Une prise<br>en main facile</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="rubriques" aria-labelledby="titre-rubriques">
+  <div class="bloc-entete"><div><h2 id="titre-rubriques">Parcourir les rubriques</h2><p>Explorez nos guides et tutoriels par thème pour trouver rapidement ce dont vous avez besoin.</p></div>
+    <a class="lien-fleche" href="guide/index.html">Voir tout le guide {icone("fleche")}</a></div>
+  <div class="grille-rubriques">{principales}</div>
+</section>
+
+<section class="bloc bloc-teinte" aria-labelledby="titre-taches">
+  <div class="bloc-entete"><div><h2 id="titre-taches">Articles populaires</h2><p>Accédez directement à la bonne section des procédures les plus demandées.</p></div>
+    <button type="button" class="lien-fleche" data-ouvrir-recherche>Rechercher un article {icone("fleche")}</button></div>
+  <div class="deux-colonnes">{pop_g}{pop_d}</div>
 </section>
 
 <section class="bloc" aria-labelledby="titre-profils">
-  <div class="bloc-entete"><h2 id="titre-profils">Je suis…</h2><p>Un parcours de lecture adapté à votre rôle. Votre progression est mémorisée sur cet appareil.</p></div>
-  <div class="grille-profils">{''.join(profils)}</div>
+  <div class="bloc-entete"><div><h2 id="titre-profils">Je suis…</h2><p>Un parcours de lecture adapté à votre rôle. Votre progression est mémorisée sur cet appareil.</p></div></div>
+  <div class="grille-profils">{profils}</div>
   <div id="detail-parcours" class="detail-parcours" hidden></div>
 </section>
 
-<section class="bloc" aria-labelledby="titre-taches">
-  <div class="bloc-entete"><h2 id="titre-taches">Comment faire pour…</h2><p>Les procédures les plus demandées, directement à la bonne section.</p></div>
-  <ul class="grille-taches">{''.join(taches)}</ul>
+<section class="bloc" aria-labelledby="titre-technique">
+  <div class="bloc-entete"><div><h2 id="titre-technique">Pour les équipes techniques</h2><p>Installer, maintenir et faire évoluer la plateforme.</p></div>
+    {f'<a class="lien-fleche" href="{word}" download>{icone("telecharger")} Toute la documentation en Word</a>' if word else ""}</div>
+  <div class="grille-rubriques deux">{techniques}</div>
 </section>
 
-<section class="bloc" aria-labelledby="titre-rubriques">
-  <div class="bloc-entete"><h2 id="titre-rubriques">Toute la documentation</h2></div>
-  <div class="grille-rubriques">{''.join(rubriques)}</div>
-  {f'<p class="note-word">{icone("telecharger")} Toute la documentation existe aussi en un seul fichier : <a href="{word}" download>version Word</a>.</p>' if word else ""}
+<section class="bloc support" id="support" aria-labelledby="titre-support">
+  <div class="support-texte">
+    <p class="support-sur">Vous ne trouvez pas la réponse ?</p>
+    <h2 id="titre-support">Notre équipe est là pour vous aider</h2>
+    <p>Contactez notre support et nous vous répondrons dans les plus brefs délais.</p>
+    <div class="support-actions">
+      <a class="btn-vert" href="{href_contact}">{icone("mail")} Contacter le support</a>
+      <a class="btn-secondaire" href="guide/faq.html">Consulter la FAQ</a>
+    </div>
+  </div>
+  <div class="support-visuel" aria-hidden="true">
+    <span class="sv-cercle"></span>
+    <span class="sv-casque">{icone("casque")}</span>
+    <span class="sv-bulle">Une question ?<br>On est là !</span>
+  </div>
 </section>
 
 <section class="bloc contenu-accueil" aria-labelledby="titre-apropos">
-  <div class="bloc-entete"><h2 id="titre-apropos">La plateforme en bref</h2></div>
-  {corps_index}
+  <details class="en-bref"><summary><h2 id="titre-apropos">La plateforme en bref</h2><span>Ce que fait SmartCampus, en quelques minutes de lecture</span></summary>
+  <div class="en-bref-corps">{corps_index}</div></details>
 </section>
 """
 
 
 # --------------------------------------------------------------------------- principal
+
+
+def resume_page(corps: str) -> str:
+    for m in re.finditer(r"<p>(.*?)</p>", corps, re.S):
+        t = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", m.group(1)))).strip()
+        if len(t) > 40 and not re.match(r"^(Menu|Accès|Rôle|Pour qui)\s*:", t):
+            return t if len(t) <= 150 else t[:147].rsplit(" ", 1)[0] + "…"
+    return ""
 
 
 def main():
@@ -544,7 +721,8 @@ def main():
         shutil.rmtree(sortie)
     (sortie / "assets").mkdir(parents=True)
     for f in MODELE.iterdir():
-        shutil.copy2(f, sortie / "assets" / f.name)
+        if f.is_file() and not f.name.startswith("."):
+            shutil.copy2(f, sortie / "assets" / f.name)
     # coloration du code (clair / sombre)
     def style_code(*noms):
         from pygments.styles import get_all_styles
@@ -566,6 +744,9 @@ def main():
             shutil.copy2(f, dest)
     if (docs / conf.get("fichier_word", "-")).exists():
         conf["fichier_word_url"] = conf["fichier_word"]
+    if conf.get("capture_accueil") and not (sortie / conf["capture_accueil"]).exists():
+        avertir(f"capture d'accueil introuvable : {conf['capture_accueil']}")
+        conf["capture_accueil"] = ""
 
     pages = []
     for md, titre_nav, groupes in aplatir(lire_navigation(mkdocs)):
@@ -578,8 +759,10 @@ def main():
 
     # 1re passe : conversion
     index_recherche, ancres, diagrammes = [], [], []
+    infos = {}
     for p in pages:
-        corps, toc, titre = convertir_page(p["md"], (docs / p["md"]).read_text(encoding="utf-8"), sortie, diagrammes)
+        source_md = docs / p["md"]
+        corps, toc, titre = convertir_page(p["md"], source_md.read_text(encoding="utf-8"), sortie, diagrammes)
         p.update(corps=corps, toc=toc, titre=titre or p["titre_nav"] or p["md"])
         if not p["titre_nav"]:
             p["titre_nav"] = "Présentation" if p["md"].endswith("index.md") and p["md"] != "index.md" else p["titre"]
@@ -587,6 +770,37 @@ def main():
         index_recherche += sections_pour_recherche(corps, p["titre"], p["url"], rubrique_nom)
         for m in re.finditer(r'<h[23] id="([^"]+)">(.*?)</h[23]>', corps, re.S):
             ancres.append((p["url"], texte_brut(re.sub(r'<a class="headerlink".*?</a>', "", m.group(2))), m.group(1)))
+        nb_mots = len(texte_brut(corps).split())
+        infos[p["url"]] = {"minutes": max(1, round(nb_mots / 200)), "resume": resume_page(corps),
+                           "maj": dt.date.fromtimestamp(source_md.stat().st_mtime)}
+
+    # catégories (rubriques thématiques)
+    categories, cat_de_page = [], {}
+    for cat in conf.get("categories", []):
+        cat = dict(cat)
+        cat["pages_obj"] = []
+        for m in cat["pages"]:
+            if m not in pages_par_md:
+                avertir(f"rubrique {cat['id']} : page {m} absente")
+                continue
+            cat["pages_obj"].append(pages_par_md[m])
+            cat_de_page.setdefault(pages_par_md[m]["url"], cat)
+        categories.append(cat)
+    for p in pages:
+        if p["md"] != "index.md" and p["url"] not in cat_de_page:
+            avertir(f"page sans rubrique dans config_site.json : {p['md']}")
+
+    # tâches fréquentes : (libellé, url avec ancre, url de page)
+    taches = []
+    for libelle, md, titre_section in conf["taches"]:
+        page = pages_par_md.get(md)
+        if not page:
+            avertir(f"tâche « {libelle} » : page {md} absente")
+            continue
+        ancre = next((a for (u, t, a) in ancres if u == page["url"] and sans_accents(titre_section) in sans_accents(t)), None)
+        if ancre is None:
+            avertir(f"tâche « {libelle} » : section « {titre_section} » introuvable dans {md}")
+        taches.append((libelle, page["url"] + (f"#{ancre}" if ancre else ""), page["url"]))
 
     glossaire = lire_glossaire((docs / "guide/glossaire.md").read_text(encoding="utf-8")) if (docs / "guide/glossaire.md").exists() else []
     parcours = {
@@ -605,9 +819,10 @@ def main():
     lineaire = [p for p in pages if p["md"] != "index.md"]
     for p in pages:
         racine = "../" * p["url"].count("/")
-        nav = construire_nav_html(pages, p["url"], racine)
+        cat = cat_de_page.get(p["url"])
+        nav = construire_nav_html(categories, p["url"], racine, cat)
         if p["md"] == "index.md":
-            contenu = page_accueil(conf, pages_par_md, p["corps"], ancres)
+            contenu = page_accueil(conf, categories, racine, infos, taches, p["corps"])
             html_page = gabarit(conf, titre_page=conf["titre"], page_url=p["url"], contenu=contenu, nav=nav, classe="accueil")
         else:
             i = lineaire.index(p)
@@ -619,26 +834,56 @@ def main():
             if suiv:
                 pied += f'<a class="suiv" href="{racine}{suiv["url"]}"><span>Suivant {icone("fleche")}</span><strong>{esc(suiv["titre"])}</strong></a>'
             pied += "</nav>"
-            miettes = [f'<a href="{racine}index.html">Accueil</a>']
-            for g in p["groupes"]:
-                idx = next((q for q in pages if q["groupes"][: len(miettes)] == p["groupes"][: len(miettes)] and q["groupes"] and q["groupes"][-1] == g and q["url"].endswith("index.html")), None)
-                miettes.append(f'<a href="{racine}{idx["url"]}">{esc(g)}</a>' if idx and idx is not p else f"<span>{esc(g)}</span>")
+            miettes = [f'<a href="{racine}index.html">{icone("maison")}<span>Accueil</span></a>']
+            if cat:
+                miettes.append(f'<a href="{racine}rubriques/{cat["id"]}.html">{esc(cat["titre"])}</a>')
+            miettes.append(f'<span aria-current="page">{esc(p["titre_nav"])}</span>')
             fil = f'<nav class="fil" aria-label="Fil d’Ariane">{SEPARATEUR.join(miettes)}</nav>'
-            description = next((e["x"][:160] for e in index_recherche if e["u"] == p["url"]), "")
-            html_page = gabarit(conf, titre_page=p["titre"], page_url=p["url"], contenu=p["corps"], nav=nav,
-                                toc=toc_html(p["toc"]), fil=fil, pied_page=pied, description=description,
-                                classe="page-glossaire" if p["md"].endswith("glossaire.md") else "")
+            info = infos[p["url"]]
+            entete = (
+                (f'<p class="pilule c-{cat["couleur"]}"><a href="{racine}rubriques/{cat["id"]}.html">{icone(cat["icone"])} {esc(cat["titre"])}</a></p>' if cat else "")
+                + f'<h1>{esc(p["titre"])}</h1>'
+                + f'<p class="meta-article"><span>{icone("horloge")} {info["minutes"]} min de lecture</span>'
+                + f'<span>{icone("calendrier")} Mise à jour le {date_fr(info["maj"])}</span>'
+                + f'<button type="button" class="lien-discret" onclick="window.print()">{icone("imprimer")} Imprimer</button></p>'
+            )
+            avis = ('<section class="avis" aria-label="Votre avis"><div><p class="avis-titre">Cet article vous a-t-il été utile ?</p>'
+                    '<p class="avis-sous">Votre retour nous aide à améliorer nos guides.</p></div>'
+                    f'<div class="avis-boutons"><button type="button" class="btn-avis oui" data-avis="oui">{icone("pouce-haut")} Oui</button>'
+                    f'<button type="button" class="btn-avis non" data-avis="non">{icone("pouce-bas")} Non</button></div></section>')
+            colonne = toc_html(p["toc"])
+            colonne = (f'<section class="carte-cote carte-toc">{colonne}</section>' if colonne else "") + carte_besoin_aide(conf, racine)
+            description = info["resume"] or next((e["x"][:160] for e in index_recherche if e["u"] == p["url"]), "")
+            classes = "article" + (" page-glossaire" if p["md"].endswith("glossaire.md") else "")
+            html_page = gabarit(conf, titre_page=p["titre"], page_url=p["url"], contenu=entete + p["corps"] + avis, nav=nav,
+                                colonne=colonne, fil=fil, bandeau=bandeau_article(conf, racine), pied_page=pied,
+                                description=description, classe=classes)
         dest = sortie / p["url"]
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(html_page, encoding="utf-8")
 
+    # pages de rubrique
+    (sortie / "rubriques").mkdir(exist_ok=True)
+    for cat in categories:
+        url = f"rubriques/{cat['id']}.html"
+        racine = "../"
+        nb = len(cat["pages_obj"])
+        minutes = sum(infos[q["url"]]["minutes"] for q in cat["pages_obj"])
+        fil = (f'<nav class="fil" aria-label="Fil d’Ariane"><a href="{racine}index.html">{icone("maison")}<span>Accueil</span></a>'
+               f'{SEPARATEUR}<span aria-current="page">{esc(cat["titre"])}</span></nav>')
+        contenu, colonne = page_rubrique(conf, cat, racine, infos, taches, parcours, pages_par_md)
+        html_page = gabarit(conf, titre_page=cat["titre"], page_url=url, contenu=contenu,
+                            nav=construire_nav_html(categories, url, racine, cat), colonne=colonne,
+                            bandeau=bandeau_rubrique(cat, nb, minutes, fil), classe="rubrique", description=cat["resume"])
+        (sortie / url).write_text(html_page, encoding="utf-8")
+
     # page 404 (serveurs web)
     (sortie / "404.html").write_text(gabarit(conf, titre_page="Page introuvable", page_url="404.html",
-        contenu='<p>Cette page n\'existe pas ou a été déplacée.</p><p><a class="btn-principal" href="index.html">Retour à l\'accueil</a> '
+        contenu='<h1>Page introuvable</h1><p>Cette page n\'existe pas ou a été déplacée.</p><p><a class="btn-principal" href="index.html">Retour à l\'accueil</a> '
                 '<button type="button" class="btn-secondaire" data-ouvrir-recherche>Rechercher</button></p>',
-        nav=construire_nav_html(pages, "404.html", "")), encoding="utf-8")
-    print(f"{len(pages)} pages, {len(index_recherche)} entrées de recherche, {len(glossaire)} termes du glossaire, "
-          f"{len(diagrammes)} diagrammes → {sortie / 'index.html'}")
+        nav=construire_nav_html(categories, "404.html", "", None), classe="article"), encoding="utf-8")
+    print(f"{len(pages)} pages, {len(categories)} rubriques, {len(index_recherche)} entrées de recherche, "
+          f"{len(glossaire)} termes du glossaire, {len(diagrammes)} diagrammes → {sortie / 'index.html'}")
 
 
 if __name__ == "__main__":

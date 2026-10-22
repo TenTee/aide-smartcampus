@@ -77,7 +77,7 @@
   /* ---------------------------------------------------------------- pages consultées */
   var lues = lire("lues", []);
   if (pageCourante && pageCourante !== "index.html" && lues.indexOf(pageCourante) < 0) { lues.push(pageCourante); ecrire("lues", lues); }
-  $$(".nav-arbre a[data-page]").forEach(function (a) { if (lues.indexOf(a.dataset.page) >= 0) { a.classList.add("lu"); a.title = "Déjà consultée"; } });
+  $$(".nav-arbre a[data-page], .parcours-coches a[data-page]").forEach(function (a) { if (lues.indexOf(a.dataset.page) >= 0) { a.classList.add("lu"); a.title = "Déjà consultée"; } });
 
   /* ---------------------------------------------------------------- recherche */
   var INDEX = D.recherche.map(function (e) {
@@ -408,7 +408,7 @@
       ouvert = !ouvert; $$(".page details").forEach(function (d) { d.open = ouvert; });
       bt.textContent = ouvert ? "Tout replier" : "Tout déplier";
     });
-    var avant = $(".page h1"); if (avant) avant.insertAdjacentElement("afterend", outil);
+    var avant = $(".page .meta-article") || $(".page h1"); if (avant) avant.insertAdjacentElement("afterend", outil);
   }
 
   /* ---------------------------------------------------------------- glossaire */
@@ -524,6 +524,8 @@
       if (defiler) detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
     };
     cartes.forEach(function (c) { c.addEventListener("click", function () { montrerParcours(c.dataset.profil, true); }); });
+    var demande = (location.search.match(/[?&]profil=([\w-]+)/) || [])[1];
+    if (demande && D.parcours[demande]) ecrire("profil", demande);
     var choisi = lire("profil", null);
     if (choisi && D.parcours[choisi]) montrerParcours(choisi, false);
   }
@@ -543,6 +545,23 @@
         '<div class="bp-actions">' + (suivante ? '<a class="btn-principal petit" href="' + racine + suivante.u + '">Étape suivante : ' + echapper(suivante.t) + "</a>" : '<a class="btn-secondaire petit" href="' + racine + 'index.html#titre-profils">Parcours terminé ✓</a>') +
         '<a class="btn-secondaire petit" href="' + racine + 'index.html#titre-profils">Changer de profil</a></div></div>';
     }
+  }
+
+  /* ---------------------------------------------------------------- avis « Cet article vous a-t-il été utile ? » */
+  var avis = $(".avis");
+  if (avis) {
+    var cleAvis = "avis:" + pageCourante;
+    var merci = function (v) {
+      $$("[data-avis]", avis).forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.avis === v)); });
+      var m = $(".avis-merci", avis);
+      if (!m) { m = document.createElement("p"); m.className = "avis-merci"; m.setAttribute("role", "status"); $(".avis-boutons", avis).insertAdjacentElement("beforebegin", m); }
+      m.textContent = v === "oui" ? "Merci pour votre retour !" : "Merci. Consultez la FAQ ou contactez le support si besoin.";
+    };
+    var dejaAvis = lire(cleAvis, null);
+    if (dejaAvis) merci(dejaAvis);
+    $$("[data-avis]", avis).forEach(function (b) {
+      b.addEventListener("click", function () { ecrire(cleAvis, b.dataset.avis); merci(b.dataset.avis); });
+    });
   }
 
   /* ---------------------------------------------------------------- remonter */
